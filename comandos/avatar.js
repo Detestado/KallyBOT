@@ -10,6 +10,6 @@ module.exports.run = async (client, message, args) =>{
     .addField('User:', `AAAAA`)
     .addField('Modrator:', `${message.author.username}#${message.author.discriminator}`);
    
-   message.channel.sendEmbed(embed)
+   message.channel.send(embed)
            
 }
