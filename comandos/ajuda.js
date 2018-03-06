@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor(":card_box: Outros")
       .setDescription(`*Comandos que "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!* \n
 \n**!ajuda** - Ira te mandar a lista de comandos.
-**!botinfo** - Ira mostrar as informaçoes de min. \n**!avatar** ``@usuário`` - Ira mostrar o avatar de um usuário.`)
+**!botinfo** - Ira mostrar as informaçoes de min. \n**!avatar** **@usuário** - Ira mostrar o avatar de um usuário.`)
       .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
       .setColor("#00f782")
       .setFooter("© Kallyᴮᴱᵀᴬ Outros")
