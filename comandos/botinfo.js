@@ -3,6 +3,8 @@ const client = new Discord.Client();
 
 module.exports.run = async (client, message, args) =>{
    
+   const dono = message.guild.members.get("244537374258888725");
+   
    message.delete().catch(O_o=>{});
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
@@ -16,7 +18,7 @@ Estou em ${client.guilds.size} servidores no discord, sou feito em **JS** (**Nod
 \nUse **!ajuda** para saber meus comandos!`)
    
       .addField("Melhores pessoas:", "``LockDzn#8368`` Foi ele que me criou! :grin: ")
-      .setFooter("© Kallyᴮᴱᵀᴬ | Site: bit.ly/LockDzn",
+      .setFooter("© Kallyᴮᴱᵀᴬ | Site: bit.ly/LockDzn", dono.user.avatarURL)
    
    message.channel.send(info)
    
