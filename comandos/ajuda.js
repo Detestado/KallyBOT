@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) =>{
    message.delete().catch(O_o=>{});
    const ajuda1 = new Discord.RichEmbed()
       .setAuthor(":question: Ajuda do Kally")
-      .setDescription(`Olá, ${message.author.tag}, aqui esta todos meus comandos!`)
+      .setDescription(`Olá, ${message.author}, aqui esta todos meus comandos!`)
       .setThumbnail(client.user.avatarURL)
       .setColor("#00a4ce")
       .setFooter("© Kallyᴮᴱᵀᴬ - bit.ly/LockDzn")
@@ -13,9 +13,9 @@ module.exports.run = async (client, message, args) =>{
    const ajuda2 = new Discord.RichEmbed()
       .setAuthor(":cop: Moderação")
       .setDescription(`*Comandos que vão ajudar a administrar servidores!* 
-\n**!mute** @usuário motivo - Ira mutar o usuário mencionado.
+\n**!mute** ``@usuário`` motivo - Ira mutar o usuário mencionado.
 **!unmute** @usuário - Ira desmutar o usuário mencionado.
-**!ban** @usuáriomotivo - Ira banir o usuário mencionado do seu servidor do discord.`)
+**!ban** @usuário motivo - Ira banir o usuário mencionado do seu servidor do discord.`)
       .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
       .setColor("#ff0000")
       .setFooter("© Kallyᴮᴱᵀᴬ Moderação")
