@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) =>{
    message.delete().catch(O_o=>{});
    let member = message.mentions.members.first();
    
-   if(!member) {
+   if(member) {
      
    const avatar = new Discord.RichEmbed()
       .setDescription(`**Clique [aqui](${member.user.avatarURL}) para baixar a imagem!**`)
