@@ -23,6 +23,6 @@ module.exports.run = async (client, message, args) =>{
   
    .setFooter("© Kallyᴮᴱᵀᴬ | bit.ly/LockDzn", dono.user.avatarURL)
    
-   message.channel.send(info)
+   message.channel.send(infoo)
    
 }
