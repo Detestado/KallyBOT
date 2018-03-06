@@ -2,16 +2,21 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
+   const question = client.emojis.find("name", "question");
+   const cop = client.emojis.find("name", "cop");
+   const card_box = client.emojis.find("name", "card_box");
+   
+   
    message.delete().catch(O_o=>{});
    const ajuda1 = new Discord.RichEmbed()
-      .setAuthor("<:question:420675677537304577> Ajudinha do Kally")
+      .setAuthor(`${question} Ajudinha do Kally`)
       .setDescription(`Olá, ${message.author}, aqui esta todos meus comandos!`)
       .setThumbnail(client.user.avatarURL)
       .setColor("#00a4ce")
       .setFooter("© Kallyᴮᴱᵀᴬ - bit.ly/LockDzn")
 
    const ajuda2 = new Discord.RichEmbed()
-      .setAuthor("<:cop:420675481029836800> Moderação")
+      .setAuthor(`${cop} Moderação`)
       .setDescription(`*Comandos que vão ajudar a administrar servidores!* 
 \n**!mute** @usuário motivo - Ira mutar o usuário mencionado.
 **!unmute** @usuário - Ira desmutar o usuário mencionado.
@@ -21,7 +26,7 @@ module.exports.run = async (client, message, args) =>{
       .setFooter("© Kallyᴮᴱᵀᴬ Moderação")
       
    const ajuda3 = new Discord.RichEmbed()
-      .setAuthor("<:card_box:420675677537304577> Outros")
+      .setAuthor(`${card_box} Outros`)
       .setDescription(`*Comandos que "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!* \n
 \n**!ajuda** - Ira te mandar a lista de comandos.
 **!botinfo** - Ira mostrar as informaçoes de min. \n**!avatar** @usuário - Ira mostrar o avatar de um usuário.`)
