@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) =>{
    const info = new Discord.RichEmbed()
    
    .setColor("#0092ca")
-   .setAuthor(message.author.name, message.author.avatarURL)
+   .setAuthor(message.author.username, message.author.avatarURL)
    .setThumbnail(message.author.avatarURL)
    
    .setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord,
