@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 
-const dono = message.members.get("244537374258888725");
 
 module.exports.run = async (client, message, args) =>{
-
+   
+   const dono = message.members.get("244537374258888725");
    message.delete().catch(O_o=>{});
    const info = new Discord.RichEmbed()
    
@@ -22,4 +22,7 @@ module.exports.run = async (client, message, args) =>{
     ``${message.author.username}#${message.author.discriminator}`` Por estar falando comigo! :smile:`)
   
    .setFooter("© Kallyᴮᴱᵀᴬ | bit.ly/LockDzn", dono.user.avatarURL)
+   
+   message.channel.send(info)
+   
 }
