@@ -16,7 +16,7 @@ lá o meu dono pode te ajuda e você vai receber atualizações!\n \n
 Estou em ${client.guilds.size} servidores no discord, sou feito em **JS** (**Node.js**/**JavaScript**), Entre no meu **site** :) (**SENDO FEITO**)
 \nUse **!ajuda** para saber meus comandos!`)
    
-      .addField(":heart: Melhores pessoas:", ` ``LockDzn#8368`` Foi ele que me criou! :grin:\n ``VC`` Por estar falando comigo! :smile: `)
+      .addField(":heart: Melhores pessoas:", ` **LockDzn#8368** Foi ele que me criou! :grin:\n **VC** Por estar falando comigo! :smile: `)
       .setFooter("© Kallyᴮᴱᵀᴬ - Kally foi criado por LockDzn - Site: bit.ly/LockDzn", dono.user.avatarURL)
    
    message.channel.send(info)
