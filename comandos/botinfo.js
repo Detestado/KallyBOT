@@ -3,7 +3,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
    
-   const dono = message.members.get("244537374258888725");
+   const dono = message.guild.members.get("244537374258888725");
+   console.log(dono)
    message.delete().catch(O_o=>{});
    const info = new Discord.RichEmbed()
    
