@@ -33,5 +33,4 @@ if(!message.content.startsWith(prefix)) return;
   try {
     let commandFile = require(`./comandos/${command}.js`);
     commandFile.run(client, message, args);
-  }
 });
