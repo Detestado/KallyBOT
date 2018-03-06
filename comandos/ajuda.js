@@ -2,9 +2,9 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
-   const question = message.emojis.find("name", "question");
-   const cop = message.emojis.find("name", "cop");
-   const card_box = message.emojis.find("name", "card_box");
+   const question = '❓';
+   const cop = message.emojis.get("name", "cop");
+   const card_box = message.emojis.get("name", "card_box");
    
    
    message.delete().catch(O_o=>{});
