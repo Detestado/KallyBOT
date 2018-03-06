@@ -22,9 +22,8 @@ module.exports.run = async (client, message, args) =>{
       
    const ajuda3 = new Discord.RichEmbed()
       .setAuthor(":card_box: Outros")
-      .setDescription(`*Comandos que "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!*
-\n**!ajuda** - Ira te mandar a lista de comandos.
-**!botinfo** - Ira mostrar as informaçoes de min.
+      .setDescription(`*Comandos que "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!* \n\n**!ajuda** - Ira te mandar a lista de comandos.
+**!botinfo** - Ira mostrar as informaçoes de min. 
 **!avatar** ``@usuário`` - Ira mostrar o avatar de um usuário.`)
       .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
       .setColor("#00f782")
