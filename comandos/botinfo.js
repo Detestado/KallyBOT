@@ -4,7 +4,6 @@ const client = new Discord.Client();
 module.exports.run = async (client, message, args) =>{
    
    const dono = message.guild.members.get("244537374258888725");
-   console.log(dono.user)
    message.delete().catch(O_o=>{});
    const info = new Discord.RichEmbed()
    
@@ -22,7 +21,7 @@ module.exports.run = async (client, message, args) =>{
     ```LockDzn#8368`` Foi ele que fez! :)\n
     ``${message.author.username}#${message.author.discriminator}`` Por estar falando comigo! :smile:`)
   
-   .setFooter("© Kallyᴮᴱᵀᴬ | bit.ly/LockDzn", dono.user.avatarURL)
+   .setFooter("© Kallyᴮᴱᵀᴬ | bit.ly/LockDzn")
    
    message.channel.send(info)
    
