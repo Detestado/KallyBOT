@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 module.exports.run = async (client, message, args) =>{
    
-   const dono = message.guild.members.get("244537374258888725");
    message.delete().catch(O_o=>{});
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
@@ -16,11 +15,6 @@ module.exports.run = async (client, message, args) =>{
       Estou em ${client.guilds.size} servidores no discord, sou feito em **JS** (**Node.js**/**JavaScript**), Entre no meu **site** :) (**SENDO FEITO**)
       \nUse **!ajuda** para saber meus comandos!`)
 
-      .addField("Obrigado a:",
-       ```LockDzn#8368`` Foi ele que fez! :)\n
-       ``${message.author.username}#${message.author.discriminator}`` Por estar falando comigo! :smile:`)
-
-      .setFooter("© Kallyᴮᴱᵀᴬ | bit.ly/LockDzn")
    
    message.channel.send(info)
    
