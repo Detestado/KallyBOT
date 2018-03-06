@@ -17,7 +17,7 @@ Estou em ${client.guilds.size} servidores no discord, sou feito em **JS** (**Nod
 \nUse **!ajuda** para saber meus comandos!`)
    
       .addField(":heart: Melhores pessoas:", ` ``LockDzn#8368`` Foi ele que me criou! :grin:\n ``${message.author.username}#${message.author.discriminator}`` Por estar falando comigo! :smile: `)
-      .setFooter("© Kallyᴮᴱᵀᴬ - Kally foi criado por LockDzn - Site: bit.ly/LockDzn", dono.user.avatarURL)
+      .setFooter("© Kallyᴮᴱᵀᴬ - Kally foi criado por LockDzn - Site: bit.ly/LockDzn")
    
    message.channel.send(info)
    
