@@ -32,9 +32,7 @@ module.exports.run = async (client, message, args) =>{
         .addField("Staffer:", message.author)
         
     message.channel.send(banido)
-     }
-  
-   } else {
+    } else {
       message.reply("você não tem permissão! :x:")
   }
 }
