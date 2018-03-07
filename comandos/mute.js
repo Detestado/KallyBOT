@@ -21,6 +21,8 @@ module.exports.run = async (client, message, args) =>{
          .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
 Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
       
+      
+         .setTimestamp()
          .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
       
       message.channel.send(norole)
