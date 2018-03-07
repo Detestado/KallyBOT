@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) =>{
         let role = message.guild.roles.find("name", "Mutado");
         member.addRole(role)
         const mutado = new Discord.RichEmbed()
-           .setAuthor(client.user..tag, client.user.avatarURL)
+           .setAuthor(client.user.tag, client.user.avatarURL)
            .setDescription(`${client.user.name} foi mutado, não respeito às regras e foi mutado! :mute: `)
            .setColor("ff0000")
 
