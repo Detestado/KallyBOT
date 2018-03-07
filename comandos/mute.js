@@ -13,15 +13,25 @@ module.exports.run = async (client, message, args) =>{
       return message.reply("Por favor, indique um motivo para o mute!");
 
    if (!message.guild.roles.find("name", "Mutado")) {
-      message.channel.send(`${message.author}, o cargo **Mutado** não foi criado. :slight_frown:  Eu não posso mutar o usuário! :slight_frown: 
-Crie um cargo com o nome "**Mutado**" e retire as permissões de falar!`)
+      
+      const norole = new Discord.RichEmbed()
+         .setColor("ff0000")
+         .setAuthor('Deu um erro', client.user.avatarURL)
+         
+         .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
+Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
+      
+      
+      message.channel.send(norole)
+      
+      
      } else {
         let role = message.guild.roles.find("name", "Mutado");
         member.addRole(role)
         
         const mutado = new Discord.RichEmbed()
            .setAuthor(member.user.tag + ' | Mute', member.user.avatarURL)
-           .setDescription(`${member.user.tag} (ID: ${member.user.id}) foi mutado, não respeito às regras e foi mutado! :mute: `)
+           C
            .setColor("ff0000")
 
            .setThumbnail(message.author.avatarURL)
