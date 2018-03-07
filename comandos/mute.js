@@ -20,8 +20,8 @@ Crie um cargo com o nome "**Mutado**" e retire as permissões de falar!`)
         member.addRole(role)
         
         const mutado = new Discord.RichEmbed()
-           .setAuthor(client.user.tag, client.user.avatarURL)
-           .setDescription(`${client.user.name} foi mutado, não respeito às regras e foi mutado! :mute: `)
+           .setAuthor(message.member.tag + ' | Mute', message.member.avatarURL)
+           .setDescription(`${message.member.tag} (ID: ${message.member.id}) foi mutado, não respeito às regras e foi mutado! :mute: `)
            .setColor("ff0000")
 
            .setThumbnail(message.author.avatarURL)
@@ -29,9 +29,9 @@ Crie um cargo com o nome "**Mutado**" e retire as permissões de falar!`)
            .setTimestamp()
            .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
 
-           .addField("Motivo", motivo)
+           .addField("Motivo:", motivo)
 
-           .addField("Staffer", message.author)
+           .addField("Staffer:", message.author)
         
         message.channel.send(mutado)
      }
