@@ -34,7 +34,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
         
         const mutado = new Discord.RichEmbed()
            .setAuthor(member.user.tag + ' | Mute', member.user.avatarURL)
-           C
+           
            .setColor("ff0000")
 
            .setThumbnail(message.author.avatarURL)
