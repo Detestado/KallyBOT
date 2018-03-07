@@ -20,8 +20,8 @@ Crie um cargo com o nome "**Mutado**" e retire as permissões de falar!`)
         member.addRole(role)
         
         const mutado = new Discord.RichEmbed()
-           .setAuthor(message.member.tag + ' | Mute', message.member.avatarURL)
-           .setDescription(`${message.member.tag} (ID: ${message.member.id}) foi mutado, não respeito às regras e foi mutado! :mute: `)
+           .setAuthor(member.user.tag + ' | Mute', member.user.avatarURL)
+           .setDescription(`${member.user.tag} (ID: ${member.user.id}) foi mutado, não respeito às regras e foi mutado! :mute: `)
            .setColor("ff0000")
 
            .setThumbnail(message.author.avatarURL)
