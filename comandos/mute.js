@@ -13,10 +13,12 @@ module.exports.run = async (client, message, args) =>{
       return message.reply("Por favor, indique um motivo para o mute!");
 
    if (!message.guild.roles.find("name", "Mutado")) {
-      message.channel.send(`${message.author}, o cargo **Mutado** não foi criado. :( Eu não posso mutar o usuário! :(`)
+      message.channel.send(`${message.author}, o cargo **Mutado** não foi criado. :slight_frown:  Eu não posso mutar o usuário! :slight_frown: 
+Crie um cargo com o nome "**Mutado**" e retire as permissões de falar!`)
      } else {
         let role = message.guild.roles.find("name", "Mutado");
         member.addRole(role)
+        
         const mutado = new Discord.RichEmbed()
            .setAuthor(client.user.tag, client.user.avatarURL)
            .setDescription(`${client.user.name} foi mutado, não respeito às regras e foi mutado! :mute: `)
@@ -30,6 +32,8 @@ module.exports.run = async (client, message, args) =>{
            .addField("Motivo", motivo)
 
            .addField("Staffer", message.author)
+        
+        message.channel.send(mutado)
      }
   
    } else {
