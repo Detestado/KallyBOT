@@ -30,7 +30,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei desmutar o usuário!`)
         
         const mutado = new Discord.RichEmbed()
            .setAuthor(member.user.tag + ' | Mute', member.user.avatarURL)
-           .setDescription(`${member.user.tag} (ID: ${member.user.id}) foi desmutado! HEEYY! Agora respeite as regras. :pensive: `)
+           .setDescription(`${member.user.tag} (ID: ${member.user.id}) foi desmutado! HEEYY! Agora respeite as regras. :wink: `)
            .setColor("ff0000")
 
            .setThumbnail(message.author.avatarURL)
