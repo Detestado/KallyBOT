@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) =>{
 
    let motivo = args.slice(1).join(' ');
    if(!motivo)
-      return message.reply("Por favor, indique um motivo para o mute!");
+      return message.reply("Por favor, indique um motivo para o banimento!");
   
    await member.ban(`Por: ${message.author.tag} | Motivo: ` + motivo)
       .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
