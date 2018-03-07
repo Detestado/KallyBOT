@@ -7,7 +7,6 @@ module.exports.run = async (client, message, args) =>{
      const teste = new Discord.RichEmbed()
         .setDescription(`Teste :heart: `)
         .setAuthor(`Teste :heart:`)
-        .setImage(member.user.avatarURL)
         .setColor("#00a4ce")
         .setFooter("© Kallyᴮᴱᵀᴬ")
    
