@@ -24,16 +24,13 @@ client.on('message', message =>{
 var autor = message.author;
 var msg = message.content.toUpperCase();
 var cont = message.content.slice(prefix.lenght).split('');
-
+  
+if(message.channel.type === "dm") return;
 if(!message.content.startsWith(prefix)) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-
-  try {
-    let commandFile = require(`./comandos/${command}.js`);
-    commandFile.run(client, message, args);
-   } catch (err) {
-    console.error(err);
-   }
+  
+  let commandFile = require(`./comandos/${command}.js`);
+  commandFile.run(client, message, args);
 });
