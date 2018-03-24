@@ -31,6 +31,10 @@ if(!message.content.startsWith(prefix)) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  let commandFile = require(`./comandos/${command}.js`);
-  commandFile.run(client, message, args);
+  try {
+    let commandFile = require(`./comandos/${command}.js`);
+    commandFile.run(client, message, args);
+   } catch (err) {
+    console.log('Alguém digitou com comando que não esta nos meus bancos de dados.');
+   }
 });
