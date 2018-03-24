@@ -41,4 +41,3 @@ module.exports.run = async (client, message, args) =>{
 
   //FINAL DO MODULE
 }   
-}
