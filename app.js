@@ -35,6 +35,6 @@ if(!message.content.startsWith(prefix)) return;
     let commandFile = require(`./comandos/${command}.js`);
     commandFile.run(client, message, args);
    } catch (err) {
-    console.log(`[ERRO] ${message.author.name} digitou um comando que não esta no meu banco de dado.`);
+    console.log(`[ERRO] ${message.author.tag} digitou um comando que não esta no meu banco de dado.`);
    }
 });
