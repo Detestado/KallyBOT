@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) =>{
 
       .setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/nbEqSrv), 
 lá o meu dono pode te ajuda e você vai receber atualizações!\n \n
-Estou em ${client.guilds.size} servidores no discord, sou feito em **JS** (**Node.js**/**JavaScript**), [Entre no meu site!](https://kally.glitch.me/) :)
+Estou em ${client.guilds.size} servidores no discord, sou feito em **JS** (**Node.js**/**JavaScript**), entre no meu site [clicando aqui!](https://kally.glitch.me/) :)
 \nUse **!ajuda** para saber meus comandos!`)
    
       .addField(":heart: Melhores pessoas:", ` **LockDzn#8368** Foi ele que me criou! :grin:\n**${message.author.username}#${message.author.discriminator}** Por estar falando comigo! :smile: `)
