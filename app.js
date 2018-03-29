@@ -9,10 +9,10 @@ var comandos = new Discord.Collection();
 client.login(process.env.BOT_TOKEN);
 
 
-fs.readdir("./eventos/", (err, files) => {
+fs.readdir("/eventos/", (err, files) => {
     if (err) return console.error("ERRO: " + err);
     files.forEach(file => {
-        let eventFunction = require(`./eventos/${file}`);
+        let eventFunction = require(`/eventos/${file}`);
         let eventName = file.split(".")[0];
         client.on(eventName, (...args) => eventFunction.run(client, ...args));
     });
