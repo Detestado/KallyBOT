@@ -8,6 +8,15 @@ var comandos = new Discord.Collection();
 
 client.login(process.env.BOT_TOKEN);
 
+client.on('ready', () =>{
+
+console.log('O Bot foi iniciado com sucesso.'.green);
+console.log(`O meu prefixo é ${prefix}`);
+  
+client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
+  
+  
+});
 
 fs.readdir("/eventos/", (err, files) => {
     if (err) return console.error("ERRO: " + err);
