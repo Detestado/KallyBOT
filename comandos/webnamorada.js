@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) =>{
      
      if(msg = "Oi amor")
         if(message.author.id = "244537374258888725"){
-           webn.send('@LockDzn#8368 Oi amorzinho! <3');
+           webn.send('<@244537374258888725> Oi amorzinho! <3');
         } else {
            webn.send(`${message.author} ??? quem é você??`);
      } // FIM
