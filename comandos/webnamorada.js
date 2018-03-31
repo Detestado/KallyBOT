@@ -13,8 +13,14 @@ module.exports.run = async (client, message, args) =>{
            webn.send('<@244537374258888725> Oi amorzinho! <3');
         } else {
            webn.send(`${message.author} ??? quem é você??`);
-     } // FIM
-   
-   
-  }
+     } 
+  } // FIM
+     if(msg = "é você na foto?")
+        if(message.author.id = "244537374258888725"){
+           webn.send(`${message.author} Sim, sou eu.`);
+        } else {
+           webn.send(`${message.author} não, essa foto foi para inganar o Lock.`);
+     } 
+  } // FIM
+
 }
