@@ -76,6 +76,7 @@ if(!message.content.startsWith(prefix)) return;
      .setDescription("```js\n" + err + "```")
      .setColor("ff0000")
     
+     .setTimestamp()
      .setFooter(`Servidor: ${message.guild.name}`, message.author.avatarURL)
   
     client.channels.get("429844583766294530").send(erro);
