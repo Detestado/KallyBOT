@@ -18,6 +18,33 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
+client.on("guildCreate", guild => {
+   const entrei = new Discord.RichEmbed()
+      .setAuthor(`${guild.name} | Entrei`)
+      .setDescription(`Entrei no servidor: ${guild.name} (id: ${guild.id})`)
+      .addField("Membros", `Esse servidor tem ${guild.memberCount} membros`)
+      .setColor("00e7ff")
+  
+  
+  
+  
+  client.channels.get("429844744110211072").send(entrei);
+});
+
+client.on("guildDelete", guild => {
+  console.log(`Fui removido do servidor: ${guild.name} (id: ${guild.id})`);
+  
+  const entrei = new Discord.RichEmbed()
+     .setAuthor(`${guild.name} | Removido`)
+     .setDescription(`Fui removido do servidor: ${guild.name} (id: ${guild.id})!`)
+     .setColor("ff0000")
+  
+  
+  
+  
+  client.channels.get("429844744110211072").send(entrei);
+});
+
 fs.readdir("./eventos/", (err, files) => {
     if (err) return console.error("ERRO: " + err);
     files.forEach(file => {
