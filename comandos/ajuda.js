@@ -5,6 +5,7 @@ module.exports.run = async (client, message, args) =>{
    
    
    message.delete().catch(O_o=>{});
+   message.author.send(`${message.author}, irei mandar a lista de comandos! :)`)
    const ajuda1 = new Discord.RichEmbed()
       .setAuthor(`Ajudinha do Kally`)
       .setDescription(`Olá, ${message.author}, aqui esta todos meus comandos!`)
@@ -25,7 +26,7 @@ module.exports.run = async (client, message, args) =>{
       
    const ajuda3 = new Discord.RichEmbed()
       .setAuthor(`Outros`)
-      .setDescription(`*Comandos que "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!* \n
+      .setDescription(`*Comandos que são "aleatorios" que podem te ajudar ou não. Comandos que não se encaixam nas outras categorias!* \n
 \n**!ajuda** - Ira te mandar a lista de comandos.
 **!botinfo** - Ira mostrar as informaçoes de min. \n**!avatar** @usuário - Ira mostrar o avatar de um usuário.`)
       .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
