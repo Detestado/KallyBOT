@@ -23,7 +23,7 @@ client.on("guildCreate", guild => {
       .setAuthor(`${guild.name} | Entrei`)
       .setDescription(`Entrei no servidor: ${guild.name} (id: ${guild.id})`)
       .addField("Membros", `Esse servidor tem ${guild.memberCount} membros`)
-      .addField("Dono", `A`)
+      .addField("Dono", `${client.guild.owner}`)
       .setColor("00e7ff")
   
   
