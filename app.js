@@ -21,8 +21,8 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
       .setAuthor(`${guild.name} | Entrei`)
-      .setDescription(`Entrei no servidor: ${guild.name} (id: ${guild.id})`)
-      .addField("Membros", `**${guild.memberCount}**`)
+      .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
+      .addField("Membros", `Com **${guild.memberCount}** membros`)
       .setColor("00e7ff")
   
   
@@ -36,7 +36,7 @@ client.on("guildDelete", guild => {
   
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
-     .setDescription(`Fui removido do servidor: ${guild.name} (id: ${guild.id})!`)
+     .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
      .setColor("ff0000")
   
   
