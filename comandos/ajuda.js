@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) =>{
    
    
    message.delete().catch(O_o=>{});
-   message.author.send(`${message.author}, irei mandar a lista de comandos! :)`)
+   message.channel.send(`${message.author}, irei mandar a lista de comandos! :)`)
    const ajuda1 = new Discord.RichEmbed()
       .setAuthor(`Ajudinha do Kally`)
       .setDescription(`Olá, ${message.author}, aqui esta todos meus comandos!`)
