@@ -23,7 +23,6 @@ client.on("guildCreate", guild => {
       .setAuthor(`${guild.name} | Entrei`)
       .setDescription(`Entrei no servidor: ${guild.name} (id: ${guild.id})`)
       .addField("Membros", `**${guild.memberCount}**`)
-      .setThumbnail(client.guild.iconURL)
       .setColor("00e7ff")
   
   
@@ -38,7 +37,6 @@ client.on("guildDelete", guild => {
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor: ${guild.name} (id: ${guild.id})!`)
-     .setThumbnail(client.guild.iconURL)
      .setColor("ff0000")
   
   
