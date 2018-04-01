@@ -44,15 +44,7 @@ client.on("guildDelete", guild => {
   
   client.channels.get("429844744110211072").send(entrei);
 });
-
-fs.readdir("./eventos/", (err, files) => {
-    if (err) return console.error("ERRO: " + err);
-    files.forEach(file => {
-        let eventFunction = require(`./eventos/${file}`);
-        let eventName = file.split(".")[0];
-        client.on(eventName, (...args) => eventFunction.run(client, ...args));
-    });
-});
+client.on('guildMemberAdd', member => require('./eventos/novo-membro.js')(client, member));
 
 client.on('message', message =>{
 
