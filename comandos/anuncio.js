@@ -5,18 +5,18 @@ module.exports.run = async (client, message, args) =>{
    message.delete().catch(O_o=>{});
 
    if (message.member.hasPermission('MANAGE_GUILD')) {
-   let mensg = args.slice(1).join(' ');
+   let mensg = args.join(" ");
    if(!mensg)
       return message.reply("Por favor, digite a mensagem do anuncio!");
       
    const anuncio = new Discord.RichEmbed()
       .setColor("0cff00")
-      .setAuthor("Anúncio", "https://discordapp.com/assets/dac20f2ccbd28f469f3154cfe6ea1709.svg")
+      .setAuthor("Anúncio", "https://cdn.discordapp.com/attachments/409846357982183434/429837842697682955/emoji.png")
       
       .setDescription(mensg)
       
       .setTimestamp()
-      .setFooter(`Por: ${message.author} - © Kallyᴮᴱᵀᴬ Anúncio`, message.author.avatarURL)
+      .setFooter(`Por: ${message.author.tag} - © Kallyᴮᴱᵀᴬ Anúncio`, message.author.avatarURL)
    
    message.channel.send(anuncio)
    
