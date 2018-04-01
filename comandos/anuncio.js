@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) =>{
       .setTimestamp()
       .setFooter(`Por: ${message.author.tag} - © Kallyᴮᴱᵀᴬ Anúncio`, message.author.avatarURL)
    
-   message.channel.send(anuncio)
+   message.channel.send("@everyone", anuncio)
    
    }
 }
