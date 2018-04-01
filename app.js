@@ -75,7 +75,10 @@ if(!message.content.startsWith(prefix)) return;
      .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`)
      .setDescription("```js\n" + err + "```")
      .setColor("ff0000")
+    
+     .setFooter(`Servidor: ${message.guild.name}`, message.author.avatarURL)
   
     client.channels.get("429844583766294530").send(erro);
    }
+  
 });
