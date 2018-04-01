@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) =>{
       .setDescription(`Olá galera, eu me chamo Kally, sou um bot focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/fsSNJJH),
 lá o meu dono pode te ajuda e você vai receber atualizações! Entre no meu site [clicando aqui](https://kally.glitch.me/)!`)
 
-      .addField("Mais:", "Agora esse servidor é parceiro do Kally :tada: HEYYY! O bot esta em fazê de desenvolvimento, então qual quer bug reporte no meu discord.")
+      .addField("Mais:", "Agora esse servidor é parceiro do Kally :tada: HEYYY! O bot esta em fase de desenvolvimento, então qual quer bug reporte no meu discord.")
       
       .setTimestamp()
       .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
