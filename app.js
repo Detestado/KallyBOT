@@ -18,7 +18,13 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
-client.on('guildMemberAdd', member => require('./eventos/guildMemberAdd.js')(client, member));
+client.on('guildMemberAdd', (member, guild) => {
+    if(member.guild.id = "420316735149965322"){
+    const channel = member.guild.channels.get("430142996051263490");
+
+    channel.send(`📥 ${member.user.tag} (${member.user.id}) joined.`);
+  }
+});
 
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
