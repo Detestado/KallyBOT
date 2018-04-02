@@ -29,8 +29,7 @@ client.on('guildMemberAdd', (member, guild) => {
         .setThumbnail(member.user.avatarURL)
         .setColor("4e74ca")
       // Dentro do servidor:
-      const channel = member.guild.channels.get("430142996051263490");
-      channel.send(entrou);
+      member.guild.channels.get("430142996051263490").send(entrou);
       
       // DM do user:
       member.send(`Olá, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
