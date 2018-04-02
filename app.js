@@ -32,7 +32,7 @@ client.on('guildMemberAdd', (member, guild) => {
       channel.send(entrou);
       
       // DM do user:
-      member.send(`Olá ${member.user.name}, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
+      member.send(`Olá, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
       
   } // FIM KALLY SERV
 });
