@@ -24,7 +24,7 @@ client.on("guildCreate", guild => {
       .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
       .addField("Membros", `Com **${guild.memberCount}** membros`)
       .addField("Dono", guild.owner)
-      .setThumbnail(client.guild.iconURL)
+      .setThumbnail(guild.iconURL)
       .setColor("00e7ff")
   
   
@@ -40,7 +40,7 @@ client.on("guildDelete", guild => {
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
      .addField("Dono", guild.owner)
-     .setThumbnail(guild.iconURL)
+     .setThumbnail(client.guild.iconURL)
      .setColor("ff0000")
   
   
