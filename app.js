@@ -18,7 +18,7 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
-client.on('guildMemberAdd', member => require('./events/guildMemberAdd.js')(client, member));
+client.on('guildMemberAdd', member => require('./eventos/guildMemberAdd.js')(client, member));
 
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
