@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) =>{
    if (message.author.id === '244537374258888725') {
      const teste = new Discord.RichEmbed()
         .setDescription("Test :heart: ")
-        .setAuthor(`Test :heart:`)
+        .setAuthor(`Test :heart:`, message.guild.iconURL)
         .setColor("#00a4ce")
    
     message.channel.send(teste)
