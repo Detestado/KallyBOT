@@ -20,7 +20,7 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
 
 client.on('guildMemberAdd', (member, guild) => {
     // KALLY SERV
-    if(!member.guild.id = "420316735149965322")
+    if(member.guild.id = "420316735149965322")
       
       const entrou = new Discord.RichEmbed()
         .setAuthor(`${member.user.tag}`, member.user.avatarURL)
@@ -37,7 +37,7 @@ client.on('guildMemberAdd', (member, guild) => {
       
  // FIM KALLY SERV
     // TESTE SERV
-    if(!member.guild.id = "418902107391918080")
+    if(member.guild.id = "418902107391918080")
       
       const teste = new Discord.RichEmbed()
         .setAuthor(`${member.user.tag}`, member.user.avatarURL)
