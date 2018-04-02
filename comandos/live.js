@@ -2,8 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
-   if(!message.author.id === "244537374258888725")
-      return message.reply("você não tem permissão! :x:")
+   if(message.author.id === "244537374258888725")
       
     let mensg = args.join(" ");
     if(!mensg)
