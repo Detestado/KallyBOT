@@ -18,13 +18,13 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
-fs.readdir("./eventos/", (err, files) => {
-    if (err) return console.error("[ERRO] " + err);
-    files.forEach(file => {
-        let eventFunction = require(`./eventos/${file}`);
-        let eventName = file.split(".")[0];
-        client.on(eventName, (...args) => eventFunction.run(client, ...args));
-    });
+client.on("guildMemberAdd", (guild, member) => {
+
+    // INICIO KALLY SERV
+   if(guild.id = "420316735149965322"){
+     member.guilds.find("id", "420316735149965322").channels.get("430142996051263490").send(`"${member.user.username}" has joined this server`);
+     
+   } // FIM KALLY SERV
 });
 
 client.on("guildCreate", guild => {
@@ -41,9 +41,9 @@ client.on("guildCreate", guild => {
   client.channels.get("429844744110211072").send(entrei);
 });
 
+  
 client.on("guildDelete", guild => {
   console.log(`Fui removido do servidor: ${guild.name} (id: ${guild.id})`);
-  
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
