@@ -20,7 +20,7 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
 
 client.on('guildMemberAdd', (member, guild) => {
     // KALLY SERV
-    if(member.guild.id = "420316735149965322")
+    if(member.guild.id = "420316735149965322"){
       
       const entrou = new Discord.RichEmbed()
         .setAuthor(`${member.user.tag}`, member.user.avatarURL)
@@ -36,25 +36,7 @@ client.on('guildMemberAdd', (member, guild) => {
       member.send(`Olá, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
       
  // FIM KALLY SERV
-    // TESTE SERV
-    if(member.guild.id = "418902107391918080")
-      
-      const teste = new Discord.RichEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
-        .setDescription(`:inbox_tray: **${member.user.tag}** entrou no servidor!`)
-        .setFooter(`ID do usuário: ${member.id}`)
-        .setThumbnail(member.user.avatarURL)
-        .setColor("4e74ca")
-      let role = member.guild.roles.find("name", "teste")
-      member.addRole(role)
-      // Dentro do servidor:
-      const channel = member.guild.channels.get("430425490713608239");
-      channel.send(teste);
-      
-      // DM do user:
-      member.send(`Teste`)
-      
- // FIM TESTE SERV
+    }
 });
 
 client.on("guildCreate", guild => {
