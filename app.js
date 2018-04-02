@@ -20,11 +20,10 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
 
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
-      .setAuthor(`${guild.name} | Entrei`)
+      .setAuthor(`${guild.name} | Entrei`, guild.iconURL)
       .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
-      .addField("Membros", `Com **${guild.memberCount}** membros (${guild.iconURL})`)
+      .addField("Membros", `Com **${guild.memberCount}** membros`)
       .addField("Dono", guild.owner)
-      .setThumbnail(guild.iconURL)
       .setColor("00e7ff")
   
   
