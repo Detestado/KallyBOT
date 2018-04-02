@@ -22,7 +22,7 @@ client.on('guildMemberAdd', (member, guild) => {
     // KALLY SERV
     if(member.guild.id = "420316735149965322"){
       
-       const entrou = new Discord.RichEmbed()
+      const entrou = new Discord.RichEmbed()
         .setAuthor(`${member.user.tag}`, member.user.avatarURL)
         .setDescription(`:inbox_tray: **${member.user.tag}** entrou no servidor!`)
         .setFooter(`ID do usuário: ${member.id}`)
