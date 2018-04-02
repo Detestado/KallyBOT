@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) =>{
    
    const dono = message.guild.members.get("244537374258888725");
    
-   message.delete().catch(O_o=>{});
+
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
       .setAuthor(client.user.username, client.user.avatarURL)
