@@ -26,6 +26,7 @@ client.on('guildMemberAdd', (member, guild) => {
         .setAuthor(`${member.user.tag}`, member.user.avatarURL)
         .setDescription(`**${member.user.tag}** entrou no servidor!`)
         .setFooter(`ID do usuário: ${member.id}`)
+        .setThumbnail(member.user.avatarURL)
         .setColor("4e74ca")
       // Dentro do servidor:
       const channel = member.guild.channels.get("430142996051263490");
