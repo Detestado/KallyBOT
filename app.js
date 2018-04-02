@@ -38,6 +38,7 @@ client.on("guildDelete", guild => {
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
+      .addField("Dono", guild.owner)
      .setColor("ff0000")
   
   
