@@ -22,7 +22,7 @@ client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
       .setAuthor(`${guild.name} | Entrei`)
       .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
-      .addField("Membros", `Com **${guild.memberCount}** membros`)
+      .addField("Membros", `Com **${guild.memberCount}** membros (${guild.iconURL})`)
       .addField("Dono", guild.owner)
       .setThumbnail(guild.iconURL)
       .setColor("00e7ff")
