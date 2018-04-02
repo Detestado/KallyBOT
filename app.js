@@ -46,7 +46,7 @@ client.on("guildDelete", guild => {
   
   client.channels.get("429844744110211072").send(entrei);
 });
-client.on('guildMemberAdd', member => require('./eventos/novo-membro.js')(client, member));
+client.on('guildMemberAdd', member => require('./eventos/novo-membro.js'));
 
 client.on('message', message =>{
 
