@@ -23,8 +23,8 @@ client.on('guildMemberAdd', (member, guild) => {
     if(member.guild.id = "420316735149965322"){
       
        const entrou = new Discord.RichEmbed()
-        .setAuthor(`${member.tag}`, member.avatarURL)
-        .setDescription(`**${member.tag}** entrou no servidor!`)
+        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
+        .setDescription(`**${member.user.tag}** entrou no servidor!`)
         .setFooter(`ID do usuário: ${member.id}`)
         .setColor("4e74ca")
       // Dentro do servidor:
@@ -32,7 +32,7 @@ client.on('guildMemberAdd', (member, guild) => {
       channel.send(entrou);
       
       // DM do user:
-      member.send(`Olá ${member.name}, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
+      member.send(`Olá ${member.user.name}, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
       
   } // FIM KALLY SERV
 });
