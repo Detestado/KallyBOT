@@ -7,6 +7,8 @@ module.exports.run = async (client, message, args) =>{
       if(!mensg)
       return message.reply("Por favor, digite o jogo que o bot vai jogar!");
       
+      
+      message.channel.send(`Agora o Kally esta jogando: ${mensg}`)
       client.user.setPresence({ game: { name: `${mensg}`, type: 0 } });
       console.log(`Agora o bot esta jogando: ${mensg}`);
    
