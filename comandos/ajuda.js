@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
    
-   message.delete().catch(O_o=>{});
    message.channel.send(`${message.author}, irei mandar a lista de comandos! :)`)
    const ajuda1 = new Discord.RichEmbed()
       .setAuthor(`Ajudinha do Kally`)
