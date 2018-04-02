@@ -24,6 +24,7 @@ client.on("guildCreate", guild => {
       .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
       .addField("Membros", `Com **${guild.memberCount}** membros`)
       .addField("Dono", guild.owner)
+      .setThumbnail(client.guild.iconURL)
       .setColor("00e7ff")
   
   
