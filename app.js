@@ -18,6 +18,15 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
+fs.readdir("./eventos/", (err, files) => {
+    if (err) return console.error("[ERRO] " + err);
+    files.forEach(file => {
+        let eventFunction = require(`./eventos/${file}`);
+        let eventName = file.split(".")[0];
+        client.on(eventName, (...args) => eventFunction.run(client, ...args));
+    });
+});
+
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
       .setAuthor(`${guild.name} | Entrei`)
@@ -46,7 +55,6 @@ client.on("guildDelete", guild => {
   
   client.channels.get("429844744110211072").send(entrei);
 });
-client.on('guildMemberAdd', member => require('./eventos/novo-membro.js'));
 
 client.on('message', message =>{
 
