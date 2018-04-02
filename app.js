@@ -39,7 +39,7 @@ client.on('guildMemberAdd', (member, guild) => {
     // TESTE SERV
     if(member.guild.id = "418902107391918080"){
       
-       const 2entrou = new Discord.RichEmbed()
+      const teste = new Discord.RichEmbed()
         .setAuthor(`${member.user.tag}`, member.user.avatarURL)
         .setDescription(`:inbox_tray: **${member.user.tag}** entrou no servidor!`)
         .setFooter(`ID do usuário: ${member.id}`)
@@ -49,7 +49,7 @@ client.on('guildMemberAdd', (member, guild) => {
       member.addRole(role)
       // Dentro do servidor:
       const channel = member.guild.channels.get("430425490713608239");
-      channel.send(2entrou);
+      channel.send(teste);
       
       // DM do user:
       member.send(`Teste`)
