@@ -18,14 +18,6 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
-client.on("guildMemberAdd", (guild, member) => {
-
-    // INICIO KALLY SERV
-   if(guild.id = "420316735149965322"){
-     member.guild.channels.get("430142996051263490").send(`"${member.user.username}" has joined this server`);
-     
-   } // FIM KALLY SERV
-});
 
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
