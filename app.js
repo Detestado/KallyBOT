@@ -39,25 +39,6 @@ client.on('guildMemberAdd', (member, guild) => {
       member.addRole(role)
 
     } // FIM KALLY SERV
-    // KALLY SERV
-    if(member.guild.id = "418902107391918080"){
-      
-      const testee = new Discord.RichEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
-        .setDescription(`:inbox_tray: **${member.user.tag}** entrou no servidor!`)
-        .setFooter(`ID do usuário: ${member.id}`)
-        .setThumbnail(member.user.avatarURL)
-        .setColor("4e74ca")
-      // Dentro do servidor:
-      member.guild.channels.get("430425490713608239").send(testee);
-      
-      // DM do user:
-      member.send(`Teste`)
-      // Auto-role
-      //let role = member.guild.roles.find("name", "Membro");
-      //member.addRole(role)
-
-    } // FIM KALLY SERV
 });
 
 client.on("guildCreate", guild => {
