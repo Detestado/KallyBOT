@@ -34,6 +34,9 @@ client.on('guildMemberAdd', (member, guild) => {
       // DM do user:
       member.send(`Olá, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
       
+      // Auto-role
+      let role = member.guild.roles.find("name", "Membro");
+      member.addRole(role)
  // FIM KALLY SERV
     }
 });
