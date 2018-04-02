@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) =>{
       message.channel.send(`Agora o Kally esta transmitindo: ${mensg}`)
 
       
-      client.user.setPresence({ game: { name: mensg, url: 'https://www.twitch.tv/LockDzn',type: 3 } });
+      client.user.setPresence({ game: { name: mensg, url: 'https://www.twitch.tv/LockDzn', type: 2 } });
       console.log(`Agora o bot esta transmitindo: ${mensg}`);
    
    
