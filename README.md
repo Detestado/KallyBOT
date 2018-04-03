@@ -1,4 +1,4 @@
 # bt-js-Kally
-<img src="https://discordbots.org/api/widget/415288373071183872.svg?">
+<center><img src="https://discordbots.org/api/widget/415288373071183872.svg?"></center>
 
 
