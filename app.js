@@ -18,6 +18,23 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
+client.on('guildMemberRemove', (member, guild) => {
+    // KALLY SERV
+    if(member.guild.id = "420316735149965322"){
+      
+      const saiu = new Discord.RichEmbed()
+        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
+        .setDescription(`:inbox_tray: **${member.user.tag}** saiu do servidor!`)
+        .setFooter(`ID do usuário: ${member.id}`)
+        .setThumbnail(member.user.avatarURL)
+      // Dentro do servidor:
+      member.guild.channels.get("430142996051263490").send(saiu);
+
+
+    } // FIM KALLY SERV
+ 
+});
+
 client.on('guildMemberAdd', (member, guild) => {
     // KALLY SERV
     if(member.guild.id = "420316735149965322"){
