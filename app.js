@@ -69,7 +69,7 @@ client.on("guildCreate", guild => {
   
   
   
-  client.channels.get("429844744110211072").send(entrei);
+    guild.channels.get("429844744110211072").send(entrei);
 });
 
   
@@ -84,7 +84,7 @@ client.on("guildDelete", guild => {
   
   
   
-  client.channels.get("429844744110211072").send(entrei);
+  guild.channels.get("429844744110211072").send(entrei);
 });
 
 client.on('message', message =>{
