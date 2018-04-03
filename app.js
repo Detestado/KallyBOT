@@ -19,30 +19,6 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
 });
 
 
-client.on('guildMemberAdd', (member, guild) => {
-    // KALLY SERV
-    if(member.guild.id = "420316735149965322"){
-      
-      const entrou = new Discord.RichEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
-        .setDescription(`:inbox_tray: **${member.user.tag}** entrou no servidor!`)
-        .setFooter(`ID do usuário: ${member.id}`)
-        .setThumbnail(member.user.avatarURL)
-        .setColor("4e74ca")
-      // Dentro do servidor:
-      member.guild.channels.get("430142996051263490").send(entrou);
-      
-      // DM do user:
-      member.send(`Olá, você entrou no servidor do KallyBOT, bem-vindo!\nBugs do bot reporte para <@244537374258888725>\n\nSite: https://kally.glitch.me`)
-      
-      // Auto-role
-      let role = member.guild.roles.find("name", "Membro");
-      member.addRole(role)
-
-    } // FIM KALLY SERV
-  
-   console.log('Um membro sai de um servidor que o kally esta')
-});
 
 
 client.on("guildCreate", guild => {
