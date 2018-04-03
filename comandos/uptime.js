@@ -1,16 +1,18 @@
 const Discord = require("discord.js");
-const moment = require("moment");
-require("moment-duration-format");
 
 module.exports.run = async (client, message, args) =>{
 
-    let uptime = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
-    let statsEmbed = new Discord.RichEmbed()
-        .setTitle('Uptime')
-        .setColor('#66b3ff')
-        .setTimestamp()
-        .addField(':timer:', `**${uptime}**`, true);
-
-    message.channel.send(statsEmbed)
+    const embed2 = new Discord.RichEmbed()
+    var date = new Date(client.uptime);
+    var uptime = '';
+    const embed2 = new Discord.RichEmbed()
+       .setColor(0xffa5f1)
+       .setTitle("I have been up for!")
+       .setDescription(uptime += date.getUTCDate() - 1 + ' days, ')
+       .setDescription(uptime += date.getUTCHours() + ' hours, ')
+       .setDescription(uptime += date.getUTCMinutes() + ' minutes, ')
+       .setDescription(uptime += date.getUTCSeconds() + ' seconds')
+       .setFooter("v1.1")
+    message.channel.send({embed: embed2}).then(msg => { msg.react("🕐") });
    
 }
