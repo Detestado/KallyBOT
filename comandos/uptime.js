@@ -2,13 +2,14 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
-     
-   const uptime = new Discord.RichEmbed()
-      .setDescription(`${client.user.username} esta online a ${client.uptime}`)
-      .setAuthor(`:stopwatch: ${client.user.name} tempo online`)
-      .setThumbnail(client.user.avatarURL)
-      .setFooter("© Kallyᴮᴱᵀᴬ")
-   
-    message.channel.send(uptime)
+  if(!args[0]) {
+   message.reply("Here's my uptime : " + client.uptime/60 + " minutes")
+   }
+  if(args[0] === "hours") {
+    message.reply("Here's my uptime : " + client.uptime/3600 + " hours")
+  }
+  if(args[0] === "days") {
+    message.reply("Here's my uptime : " + client.uptime/86400 + " days")
+   }
    
 }
