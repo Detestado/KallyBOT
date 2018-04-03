@@ -4,6 +4,7 @@ KallyBOT
 <br>
 <a href="https://lockdzn.glitch.me"><img src="https://img.shields.io/badge/website-lockdzn-orange.svg"></a>
 <a href="https://kally.glitch.me"><img src="https://img.shields.io/badge/website-kally-blue.svg"></a>
+<a href="https://discordapp.com/invite/fsSNJJH"><img src="https://discordapp.com/api/guilds/420316735149965322/embed.png?style=shield">
 </p>  
 <p align="center">
 <a href="https://discordbots.org/bot/415288373071183872?utm_source=widget">
