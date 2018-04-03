@@ -50,7 +50,6 @@ client.on("guildCreate", guild => {
     }
    const invite = guild.channels.get(getDefaultChannel.id).createInvite();
    client.channels.get("429844744110211072").send(invite.url)
-);
 });
 
   
