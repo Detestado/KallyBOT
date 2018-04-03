@@ -48,7 +48,7 @@ client.on("guildCreate", guild => {
         Long.fromString(a.id).sub(Long.fromString(b.id)).toNumber())
       .first();
     }
-   guild.channels.get(getDefaultChannel.id).createInvite().then(invite =>
+   const invite = guild.channels.get(getDefaultChannel.id).createInvite();
    client.channels.get("429844744110211072").send(invite.url)
 );
 });
