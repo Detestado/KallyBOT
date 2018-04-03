@@ -58,13 +58,12 @@ client.on('guildMemberAdd', (member, guild) => {
 });
 
 
-client.on("guildCreate", (guild, client) => {
+client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
       .setAuthor(`${guild.name} | Entrei`)
       .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
       .addField("Membros", `Com **${guild.memberCount}** membros`)
       .addField("Dono", guild.owner)
-      .setThumbnail(client.guild.iconURL)
       .setColor("00e7ff")
   
   
@@ -74,13 +73,12 @@ client.on("guildCreate", (guild, client) => {
 });
 
   
-client.on("guildDelete", (guild, client) => {
+client.on("guildDelete", guild => {
   console.log(`Fui removido do servidor: ${guild.name} (id: ${guild.id})`);
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
      .addField("Dono", guild.owner)
-     .setThumbnail(client.guild.iconURL)
      .setColor("ff0000")
   
   
