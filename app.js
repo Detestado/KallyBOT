@@ -18,21 +18,6 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
-client.on('guildMemberRemove', (member, guild) => {
-    // KALLY SERV
-    if(member.guild.id = "420316735149965322"){
-      
-      const saiu = new Discord.RichEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.avatarURL)
-        .setDescription(`:outbox_tray: **${member.user.tag}** saiu do servidor!`)
-        .setFooter(`ID do usuário: ${member.id}`)
-        .setThumbnail(member.user.avatarURL)
-      // Dentro do servidor:
-      member.guild.channels.get("430142996051263490").send(saiu);
-
-
-    } // FIM KALLY SERV
-});
 
 client.on('guildMemberAdd', (member, guild) => {
     // KALLY SERV
@@ -55,6 +40,8 @@ client.on('guildMemberAdd', (member, guild) => {
       member.addRole(role)
 
     } // FIM KALLY SERV
+  
+   console.log('Um membro sai de um servidor que o kally esta')
 });
 
 
@@ -69,7 +56,7 @@ client.on("guildCreate", guild => {
   
   
   
-    guild.channels.get("429844744110211072").send(entrei);
+    client.channels.get("429844744110211072").send(entrei);
 });
 
   
@@ -84,7 +71,7 @@ client.on("guildDelete", guild => {
   
   
   
-  guild.channels.get("429844744110211072").send(entrei);
+  client.channels.get("429844744110211072").send(entrei);
 });
 
 client.on('message', message =>{
