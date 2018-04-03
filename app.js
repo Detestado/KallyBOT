@@ -28,11 +28,12 @@ client.on("guildCreate", guild => {
       .addField("Membros", `Com **${guild.memberCount}** membros`)
       .addField("Dono", guild.owner)
       .setColor("00e7ff")
+
   
-  
-  
-  
-    client.channels.get("429844744110211072").send(entrei);
+   client.channels.get("429844744110211072").send(entrei);
+   client.guild.createInvite().then(invite =>
+   client.channels.get("429844744110211072").send(invite.url)
+);
 });
 
   
