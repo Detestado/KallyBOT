@@ -5,6 +5,10 @@ module.exports.run = async (client, message, args) =>{
    
    const dono = message.guild.members.get("244537374258888725");
    
+    var date = new Date(client.uptime);
+    var uptime = '';
+
+   
    const dia = uptime += date.getUTCDate() - 1
    const hora = uptime += date.getUTCHours()
    const minuto = uptime += date.getUTCMinutes()
