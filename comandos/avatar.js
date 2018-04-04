@@ -7,6 +7,7 @@ module.exports.run = async (client, message, args) =>{
    if(member) {
      
    const avatar = new Discord.RichEmbed()
+      
       .setTitle("🖼 Foto de avatar de " + `${member.user.username}`)
       .setDescription(`**Clique [aqui](${member.user.avatarURL}) para baixar a imagem!**`)
       .setImage(member.user.avatarURL)
@@ -18,6 +19,7 @@ module.exports.run = async (client, message, args) =>{
    } else {
       
    const avatar = new Discord.RichEmbed()
+      .setTitle("🖼 Foto de avatar de " + `${message.author.username}`)
       .setDescription(`**Clique [aqui](${message.author.avatarURL}) para baixar a imagem!**`)
       .setAuthor(`Foto de avatar de ${message.author.username}`)
       .setImage(message.author.avatarURL)
