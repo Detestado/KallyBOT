@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) =>{
 
       .setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/nbEqSrv), 
 lá o meu dono pode te ajuda e você vai receber atualizações e também entre no meu [site](https://kally.glitch.me/)!\n
-Estou em ${client.guilds.size} servidores do discord e estou acordado a **${uptime += date.getUTCDate() - 1}**d, **${uptime += date.getUTCHours()}**h, **${uptime += date.getUTCMinutes()}**m, **${uptime += date.getUTCSeconds()}**s. Sou feito em **JS** (Node.js/JavaScript) :)
+Estou em ${client.guilds.size} servidores do discord e estou acordado a **" + uptime += date.getUTCDate() - 1 +"**d, **${uptime += date.getUTCHours()}**h, **${uptime += date.getUTCMinutes()}**m, **${uptime += date.getUTCSeconds()}**s. Sou feito em **JS** (Node.js/JavaScript) :)
 \nUse **k!ajuda** para saber meus comandos!`)
    
       .addField(":heart: Melhores pessoas:", ` **LockDzn#8368** Foi ele que me criou! :grin:\n**${message.author.username}#${message.author.discriminator}** Por estar falando comigo! :smile: `)
