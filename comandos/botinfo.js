@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) =>{
 
       .setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/nbEqSrv), 
 lá o meu dono pode te ajuda e você vai receber atualizações e também entre no meu [site](https://kally.glitch.me/)!\n
-Estou em ${client.guilds.size} servidores do discord e estou acordado a **`) 
+Estou em ${client.guilds.size} servidores do discord e estou acordado a **`)
       .setDescription(uptime += date.getUTCDate() - 1 + `**d, **`) 
       .setDescription(uptime += date.getUTCHours() + `**h, **`)
       .setDescription(uptime += date.getUTCMinutes() + `**m, **`)
