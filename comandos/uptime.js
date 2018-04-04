@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) =>{
     
     const embed2 = new Discord.RichEmbed()
        .setTitle("🕐 Tempo que eu acordei:")
-       .setDescription("Teste")
+       .setDescription(s)
     
     
     
