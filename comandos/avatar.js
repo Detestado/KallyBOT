@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) =>{
      
    const avatar = new Discord.RichEmbed()
       .setDescription(`**Clique [aqui](${member.user.avatarURL}) para baixar a imagem!**`)
-      .setAuthor(`Foto de avatar de ${member.user.username}`)
+      .setAuthor(":frame_photo: " + `Foto de avatar de ${member.user.username}`)
       .setImage(member.user.avatarURL)
       .setColor("#00a4ce")
       .setFooter("© Kallyᴮᴱᵀᴬ")
