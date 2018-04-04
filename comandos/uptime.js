@@ -5,8 +5,7 @@ module.exports.run = async (client, message, args) =>{
     var date = new Date(client.uptime);
     var uptime = '';
     const embed2 = new Discord.RichEmbed()
-       .setColor(0xffa5f1)
-       .setTitle("I have been up for!")
+       .setTitle("🕐 Tempo que eu acordei:")
        .setDescription(uptime += date.getUTCDate() - 1 + ' days, ')
        .setDescription(uptime += date.getUTCHours() + ' hours, ')
        .setDescription(uptime += date.getUTCMinutes() + ' minutes, ')
