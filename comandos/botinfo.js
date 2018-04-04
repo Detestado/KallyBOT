@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor(client.user.username, client.user.avatarURL)
       .setThumbnail(client.user.avatarURL)
 
-      .setDescription(`**${seg}**s`)
+      .setDescription(`**${seg}**s\n\n`)
    
       //.setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/nbEqSrv), 
 //lá o meu dono pode te ajuda e você vai receber atualizações e também entre no meu [site](https://kally.glitch.me/)!\n
@@ -23,8 +23,8 @@ module.exports.run = async (client, message, args) =>{
       //.setDescription("**" + uptime += date.getUTCDate() - 1 + `**d, `) 
       //.setDescription("**" + uptime += date.getUTCHours() + `**h, `)
       //.setDescription("**" + uptime += date.getUTCMinutes() + `**m,`)
-      //.setDescription("**" + uptime += date.getUTCSeconds() + `**s. Sou feito em **JS** (Node.js/JavaScript) :) 
-//\nUse **k!ajuda** para saber meus comandos!`)
+      .setDescription(`**${seg}**s. Sou feito em **JS** (Node.js/JavaScript) :) 
+\nUse **k!ajuda** para saber meus comandos!`)
    
       .addField(":heart: Melhores pessoas:", ` **LockDzn#8368** Foi ele que me criou! :grin:\n**${message.author.username}#${message.author.discriminator}** Por estar falando comigo! :smile: `)
       .setFooter("Kally foi criado por LockDzn - Site: bit.ly/LockDzn", dono.user.avatarURL)
