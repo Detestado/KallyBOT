@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
-   
-   message.channel.send(`${message.author}, irei mandar a lista de comandos! :)`)
+   message.author.react("🤖")
+   message.channel.send(`${message.author}, irei mandar a lista de comandos no seu privado! :)`)
    const ajuda1 = new Discord.RichEmbed()
       .setAuthor(`Ajudinha do Kally`)
       .setDescription(`Olá, ${message.author}, aqui esta todos meus comandos!`)
