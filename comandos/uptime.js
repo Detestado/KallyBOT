@@ -8,12 +8,14 @@ module.exports.run = async (client, message, args) =>{
     const d = uptime += date.getUTCDate() - 1 + 'd, ';
     const h = uptime += date.getUTCHours() + 'h, ';
     const m = uptime += date.getUTCMinutes() + 'm, ';
-    const s = uptime += date.getUTCSeconds() + 's.';
+    const s = uptime += date.getUTCSeconds() + 's';
 
     
     const embed2 = new Discord.RichEmbed()
-       .setTitle("🕐 Tempo que eu acordei:")
-       .setDescription("**" + s + "**")
+       .setTitle("🕐 Meu uptime")
+       .setThumbnail(client.user.avatarURL)
+    
+       .setDescription("Estou acordado a **" + s + "** (ou seja, meu uptime) :zzz:")
     
     
     
