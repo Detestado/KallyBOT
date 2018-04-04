@@ -8,8 +8,6 @@ module.exports.run = async (client, message, args) =>{
     var date = new Date(client.uptime);
     var uptime = '';
    
-   const min = uptime += date.getUTCMinutes();
-   const seg = uptime += date.getUTCSeconds();
    
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
@@ -20,7 +18,7 @@ module.exports.run = async (client, message, args) =>{
    
       .setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/nbEqSrv), 
 lá o meu dono pode te ajuda e você vai receber atualizações e também entre no meu [site](https://kally.glitch.me/)!\n
-Estou em ${client.guilds.size} servidores do discord. \nEstou acordado a`)
+Estou em ${client.guilds.size} servidores do discord.`)
    
       .addField("Esntou acordado faz", uptime += date.getUTCDate() + "d, " + uptime += date.getUTCHours() + "h, " + uptime += date.getUTCMinutes() + "m, " + uptime += date.getUTCSeconds() + "s.")
       //.setDescription("**" + uptime += date.getUTCDate() - 1 + `**d, `) 
