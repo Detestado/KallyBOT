@@ -9,10 +9,11 @@ module.exports.run = async (client, message, args) =>{
     const embed2 = new Discord.RichEmbed()
        .setTitle("🕐 Tempo que eu acordei:")
        .setDescription('**')
-       .setDescription(uptime += date.getUTCDate() - 1 + ' d, ')
-       .setDescription(uptime += date.getUTCHours() + ' h, ')
-       .setDescription(uptime += date.getUTCMinutes() + ' m, ')
-       .setDescription(uptime += date.getUTCSeconds() + ' s.**')
+       .setDescription(uptime += date.getUTCDate() - 1 + 'd, ')
+       .setDescription(uptime += date.getUTCHours() + 'h, ')
+       .setDescription(uptime += date.getUTCMinutes() + 'm, ')
+       .setDescription(uptime += date.getUTCSeconds() + 's.**')
+       .setDescription('Teste')
     
     
     
