@@ -5,8 +5,8 @@ module.exports.run = async (client, message, args) =>{
     var date = new Date(client.uptime);
     var uptime = '';
     
-    var s = uptime += date.getUTCSeconds()
-    var m = uptime += date.getUTCMinutes()
+    //var s = uptime += date.getUTCSeconds()
+    //var m = uptime += date.getUTCMinutes()
     
     const embed2 = new Discord.RichEmbed()
        .setTitle("🕐 Tempo que eu acordei:")
@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) =>{
        .setDescription(uptime += date.getUTCMinutes() + ' minuto(s), ')
        .setDescription(uptime += date.getUTCSeconds() + ' segundo(s)')
     
-       .addField("🕐 Estou acordado faz", m + "m, **" + s + "**s.")
+       //.addField("🕐 Estou acordado faz", m + "m, **" + s + "**s.")
     
     
     message.channel.send(embed2).then(msg => { msg.react("🕐") });
