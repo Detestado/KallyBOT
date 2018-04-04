@@ -56,7 +56,7 @@ var cont = message.content.slice(prefix.lenght).split('');
   
 if(message.channel.type === "dm") return;
 if(!message.content.startsWith(prefix)) return;
-if(message.author.id === "244537374258888725") return;
+if(message.author.id === "244537374258888725" || message.author.id === "408320630434430977") return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
