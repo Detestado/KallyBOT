@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) =>{
    
     var date = new Date(client.uptime);
     var uptime = '';
-
+   const min = uptime += date.getUTCMinutes();
    const seg = uptime += date.getUTCSeconds();
    
    const info = new Discord.RichEmbed()
@@ -15,14 +15,14 @@ module.exports.run = async (client, message, args) =>{
       .setAuthor(client.user.username, client.user.avatarURL)
       .setThumbnail(client.user.avatarURL)
 
-      .setDescription(`**${seg}**s\n\n`)
+      .setDescription(`**${min}**m, **${seg}**s \n \n`)
    
       //.setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord, entre no meu servidor [aqui](https://discord.gg/nbEqSrv), 
 //lá o meu dono pode te ajuda e você vai receber atualizações e também entre no meu [site](https://kally.glitch.me/)!\n
 //Estou em ${client.guilds.size} servidores do discord. \nEstou acordado a`)
       //.setDescription("**" + uptime += date.getUTCDate() - 1 + `**d, `) 
       //.setDescription("**" + uptime += date.getUTCHours() + `**h, `)
-      //.setDescription("**" + uptime += date.getUTCMinutes() + `**m,`)
+      .setDescription(`**${min}**m, `)
       .setDescription(`**${seg}**s. Sou feito em **JS** (Node.js/JavaScript) :) 
 \nUse **k!ajuda** para saber meus comandos!`)
    
