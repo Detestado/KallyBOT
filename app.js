@@ -64,14 +64,13 @@ if(!message.content.startsWith(prefix)) return;
     let commandFile = require(`./comandos/${command}.js`);
     commandFile.run(client, message, args);
    } catch (err) {
-    console.log(`[ERRO] ${message.author.tag} digitou um comando que não esta no meu banco de dado.`);
     const erro = new Discord.RichEmbed()
-     .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`)
+     .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`, message.author.avatarURL)
      .setDescription("```js\n" + err + "```")
      .setColor("ff0000")
     
      .setTimestamp()
-     .setFooter(`Servidor: ${message.guild.name}`, message.author.avatarURL)
+     .setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
   
     client.channels.get("429844583766294530").send(erro);
    }
