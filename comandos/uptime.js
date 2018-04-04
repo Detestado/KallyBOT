@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) =>{
        .setDescription(uptime += date.getUTCMinutes() + ' minuto(s), ')
        .setDescription(uptime += date.getUTCSeconds() + ' segundo(s)')
     
-       .addField("🕐 Estou acordado faz", uptime += date.getUTCMinutes() + "m, **" + uptime += date.getUTCSeconds() + "**s.")
+       .addField("🕐 Estou acordado faz", uptime += date.getUTCMinutes() + 'm, ' + uptime += date.getUTCSeconds() + 's.')
     
     
     message.channel.send(embed2).then(msg => { msg.react("🕐") });
