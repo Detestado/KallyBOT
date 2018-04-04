@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) =>{
        .setTitle("🕐 Meu uptime")
        .setThumbnail(client.user.avatarURL)
     
-       .setDescription("Estou acordado a **" + s + "** (ou seja, meu uptime) :zzz:")
+       .setDescription("Estou acordado a **" + m + "** (ou seja, meu uptime) :zzz:")
     
     
     
