@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) =>{
     var date = new Date(client.uptime);
     var uptime = '';
 
-   const seg = uptime += date.getUTCSeconds;
+   const seg = uptime += date.getUTCSeconds();
    
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
