@@ -7,7 +7,7 @@ client = discord.Client()
 
 
 @client.event
-async def on_ready():
+def on_ready():
     print('')
     print("="*30)
     print("CONECTADO! SISTEMA KALLYPY ATIVADO!")
@@ -16,7 +16,7 @@ async def on_ready():
 
 
 @client.event
-async def on_member_join(member):
+def on_member_join(member):
     serverKally = member.server
     canalKally = client.get_channel("430142996051263490")
     msgKally = f"Bem-vindo {member.mention} ao servidor do bot Kally!\n" \
@@ -34,7 +34,7 @@ async def on_member_join(member):
 
 
 @client.event
-async def on_member_remove(member):
+def on_member_remove(member):
     canalKally = client.get_channel("430142996051263490")
     server = member.server
     saiuKally = discord.Embed(description=f":outbox_tray: {member.mention} saiu do servidor")
