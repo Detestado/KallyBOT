@@ -19,8 +19,8 @@ def on_ready():
 def on_member_join(member):
     serverKally = member.server
     canalKally = client.get_channel("430142996051263490")
-    msgKally = f"Bem-vindo {member.mention} ao servidor do bot Kally!\n" \
-          f":cop: Qualquer bug do bot reporte para <@244537374258888725>"
+    msgKally = "Bem-vindo {} ao servidor do bot Kally!\n".format(member.mention) \
+          ":cop: Qualquer bug do bot reporte para <@244537374258888725>"
     entrouKally = discord.Embed(title=member.name + '#' + member.discriminator, colour=discord.Colour(0x4a90e2),
                            description=":inbox_tray: {} entrou no servidor".format(member.mention))
     entrouKally.set_thumbnail(url=member.avatar_url)
