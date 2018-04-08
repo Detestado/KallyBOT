@@ -5,12 +5,13 @@ print("Conectando...")
 
 client = discord.Client()
 
+conec = "CONECTADO! SISTEMA KALLYPY ATIVADO!"
 
 @client.event
 def on_ready():
     print('')
     print("="*30)
-    print("CONECTADO! SISTEMA KALLYPY ATIVADO!")
+    print(conec)
     print("{} ({})".format(client.user.name, client.user.id))
     print("="*30)
 
