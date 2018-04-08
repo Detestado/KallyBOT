@@ -11,7 +11,7 @@ def on_ready():
     print('')
     print("="*30)
     print("CONECTADO! SISTEMA KALLYPY ATIVADO!")
-    print(f"{client.user.name} ({client.user.id})")
+    print("{} ({})".format(client.user.name, client.user.id))
     print("="*30)
 
 
@@ -22,7 +22,7 @@ def on_member_join(member):
     msgKally = f"Bem-vindo {member.mention} ao servidor do bot Kally!\n" \
           f":cop: Qualquer bug do bot reporte para <@244537374258888725>"
     entrouKally = discord.Embed(title=member.name + '#' + member.discriminator, colour=discord.Colour(0x4a90e2),
-                           description=f":inbox_tray: {member.mention} entrou no servidor")
+                           description=":inbox_tray: {} entrou no servidor".format(member.mention))
     entrouKally.set_thumbnail(url=member.avatar_url)
 
 
@@ -37,7 +37,7 @@ def on_member_join(member):
 def on_member_remove(member):
     canalKally = client.get_channel("430142996051263490")
     server = member.server
-    saiuKally = discord.Embed(description=f":outbox_tray: {member.mention} saiu do servidor")
+    saiuKally = discord.Embed(description=f":outbox_tray: {} saiu do servidor".format(member.mention))
     saiuKally.set_author(name=member.name + '#' + member.discriminator, icon_url=member.avatar_url)
     saiuKally.set_thumbnail(url=member.avatar_url)
 
