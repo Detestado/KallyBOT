@@ -10,10 +10,9 @@ client = discord.Client()
 async def on_ready():
     print('')
     print("="*30)
-    print("CONECTADO! BOT ONLINE!")
+    print("CONECTADO! SISTEMA KALLYPY ATIVADO!")
     print(f"{client.user.name} ({client.user.id})")
     print("="*30)
-
 
 
 @client.event
