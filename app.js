@@ -50,8 +50,7 @@ client.on("guildDelete", guild => {
 
 client.on('message', message =>{
 	if(message.content == '<@415288373071183872>'){
-	  let servidorkally = client.guilds.find("name", "KallyBOT Squad");
-    	  const ayy = servidorkally.emojis.get("432748235464114178");
+	  const ayy = client.emojis.find("name", "Kally");
 	  message.channel.send(`${ayy} | Olá ${message.author}, eu sou Kally, o bot muito lindo, ou não... meu prefix é ***k!***, para saber meus comandos digite ***k!ajuda***.`)
   }    
 });
