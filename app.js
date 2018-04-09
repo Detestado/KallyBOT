@@ -49,6 +49,14 @@ client.on("guildDelete", guild => {
 });
 
 client.on('message', message =>{
+	if(message.content == '<@415288373071183872>'){
+    const ayy = client.emojis.get("432748235464114178");
+	  message.channel.send(`${ayy} | Olá ${message.author}, eu sou Kally, o bot muito lindo, ou não... meu prefix é ***k!***, para saber meus comandos digite ***k!ajuda***.`)
+  }    
+});
+
+
+client.on('message', message =>{
 
 var autor = message.author;
 var msg = message.content.toUpperCase();
