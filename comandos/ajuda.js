@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const preferencias = require('./../config.json');
-const prefix = preferencias.prefix;
+const configP = require('./../config.json');
+const prefix = configP.prefix;
 
 module.exports.run = async (client, message, args) =>{
 
