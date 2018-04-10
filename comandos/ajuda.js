@@ -19,7 +19,8 @@ module.exports.run = async (client, message, args) =>{
 \n**${prefix}mute** @usuário motivo - Ira mutar o usuário mencionado.
 **${prefix}unmute** @usuário - Ira desmutar o usuário mencionado.
 **${prefix}ban** @usuário motivo - Ira banir o usuário mencionado do seu servidor do discord.
-**${prefix}anuncio** mensagem do anuncio - Ira mandar um anuncio no chat que o comandos foi executado.`)
+**${prefix}anuncio** mensagem do anuncio - Ira mandar um anuncio no chat que o comandos foi executado.
+**${prefix}limpar** número de mensagens - Ira limpar o número de mensagens escolhido.`)
       .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
       .setColor("#ff0000")
       .setFooter("© Kallyᴮᴱᵀᴬ Moderação")
@@ -30,7 +31,8 @@ module.exports.run = async (client, message, args) =>{
 \n**${prefix}ajuda** - Ira te mandar a lista de comandos.
 **${prefix}botinfo** - Ira mostrar as informaçoes de min. 
 **${prefix}avatar** @usuário - Ira mostrar o avatar de um usuário.
-**${prefix}uptime**- Ira mostrar o tempo que o bot esta online.`)
+**${prefix}uptime**- Ira mostrar o tempo que o bot esta online.
+**${prefix}convite**- Ira mostrar o convite do servidor para suporte e invite do bot.`)
       .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
       .setColor("#00f782")
       .setFooter("© Kallyᴮᴱᵀᴬ Outros")
