@@ -55,6 +55,14 @@ client.on('message', message =>{
   }    
 });
 
+client.on('message', message =>{
+	if(message.content.channel == "433385459343949826" ){
+	   message.react("👍")
+	   message.react("👎")
+           message.react("❤")
+  }    
+});
+
 
 client.on('message', message =>{
 
