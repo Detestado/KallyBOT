@@ -56,7 +56,7 @@ client.on('message', message =>{
 });
 
 client.on('message', message =>{
-	if(message.channel.content == "433385459343949826" ){
+	if(message.channel.id == "433385459343949826" ){
 	   message.react("👍")
 	   message.react("👎")
            message.react("❤")
