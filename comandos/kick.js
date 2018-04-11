@@ -22,6 +22,5 @@ module.exports.run = async (client, message, args) =>{
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
     message.reply(`${member.user.tag} foi kickado por ${message.author.tag} motivo: ${reason}`);
 
-  }
    
 }
