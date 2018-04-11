@@ -18,11 +18,6 @@ client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
   
 });
 
-function sleep(seconds){
-    var waitUntil = new Date().getTime() + seconds*1000;
-    while(new Date().getTime() < waitUntil) true;
-}
-
 
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
@@ -61,9 +56,7 @@ client.on('message', message =>{
 client.on('message', message =>{
 	if(message.channel.id == "433385459343949826" ){
 	   message.react("👍")
-	   sleep(2);
 	   message.react("👎")
-	   sleep(2);
            message.react("❤")
   }    
 });
