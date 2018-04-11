@@ -12,12 +12,12 @@ module.exports.run = async (client, message, args) =>{
     .addField(':busts_in_silhouette: Quantidade de membros', `${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size} (${message.guild.members.filter(m=>m.user.bot).size} bot(s))`)
     .addField(':earth_americas: Região', message.guild.region)
     .addField(':calendar_spiral: Criado em', message.guild.createdAt.toLocaleString())
-    .addField(':calendar_spiral: Você entrou em', message.member.joinedAt)
+    .addField(':calendar_spiral: Você entrou em', message.member.joinedAt.toLocaleString())
     
     .setThumbnail(servericon)
      
     .setTimestamp()
-    .setFooter(client.user.username, client.user.avatarURL);
+    .setFooter("Kallyᴮᴱᵀᴬ", client.user.avatarURL);
   
     message.channel.send(serverinfo)
     
