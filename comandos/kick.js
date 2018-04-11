@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) =>{
     const comousarkick = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!kick")
-      .setDescription(`Ira mutar o usuário mencionado.`)
+      .setDescription(`Ira kickar o usuário mencionado.`)
       .setColor("#60d1f6")
       .setFooter("© Kally - kally.glitch.me")
       .addField("Como usar", "`k!kick @usuário <motivo>`")
