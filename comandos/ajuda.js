@@ -32,8 +32,10 @@ module.exports.run = async (client, message, args) =>{
 \n**${prefix}ajuda** - Ira te mandar a lista de comandos.
 **${prefix}botinfo** - Ira mostrar as informaçoes de min. 
 **${prefix}avatar** @usuário - Ira mostrar o avatar de um usuário.
-**${prefix}uptime**- Ira mostrar o tempo que o bot esta online.
-**${prefix}convite**- Ira mostrar o convite do servidor para suporte e invite do bot.`)
+**${prefix}uptime** - Ira mostrar o tempo que o bot esta online.
+**${prefix}convite** - Ira mostrar o convite do servidor para suporte e invite do bot.
+**${prefix}serverinfo** - Ira mostrar as informações do servidor que o comando foi executado.
+**${prefix}vote** mensagem da votação - Ira abrir uma votação no canal que o comando foi executado.`)
       .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
       .setColor("#00f782")
       .setFooter("© Kallyᴮᴱᵀᴬ Outros")
