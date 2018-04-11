@@ -81,8 +81,14 @@ if(!message.content.startsWith(prefix)) return;
     let commandFile = require(`./comandos/${command}.js`);
     commandFile.run(client, message, args);
    } catch (err) {
- 
-    	client.channels.get("429844583766294530").send("Oi");
+     const erro = new Discord.RichEmbed()
+	 .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`, message.author.avatarURL)
+	 .setDescription("```js\n" + err + "```")
+	 .setColor("ff0000")
+
+	 .setTimestamp()
+	 .setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
+     client.channels.get("429844583766294530").send(erro);
    }
   
 });
