@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) =>{
     if(!message.member.roles.some(r=>["⚒ Desenvolvedor"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
     
-    const comousar = new Discord.RichEmbed()
+    const comousarkick = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!kick")
       .setDescription(`Ira mutar o usuário mencionado.`)
@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) =>{
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.reply(comousar);
+      return message.reply(comousarkick);
     if(!member.kickable) 
       return message.reply("eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
     
