@@ -7,11 +7,11 @@ module.exports.run = async (client, message, args) =>{
    if (message.member.hasPermission('MANAGE_GUILD')) {
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
-      .setTitle("k!kick")
+      .setTitle("k!anuncio")
       .setDescription(`Ira mandar um anuncio no chat que o comandos foi executado.`)
       .setColor("#60d1f6")
       .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!kick @usuário <motivo>`")
+      .addField("Como usar", "`k!anuncio @usuário <motivo>`")
       .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar servidor`")   
       
    let mensg = args.join(" ");
