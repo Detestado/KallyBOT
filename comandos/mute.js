@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) =>{
    message.delete().catch(O_o=>{});
    if (message.member.hasPermission('MANAGE_MESSAGES')) {
    const comousar = new Discord.RichEmbed()
-      .setAuthor(client.user.name, client.user.avatarURL)
+      .setAuthor("Kally", client.user.avatarURL)
       .authorUrl("https://kally.glitch.me/")
       .setTitle("k!mute")
       .setDescription(`Ira mutarIra mutar o usuário mencionado.`)
