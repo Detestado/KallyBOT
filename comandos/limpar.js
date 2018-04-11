@@ -7,8 +7,8 @@ module.exports.run = async (client, message, args) =>{
    if(args == "2") return message.reply("por favor, digite o número maior que 2 para deletar as mensagens. :x:");
    if(args == "1") return message.reply("por favor, digite o número maior que 2 para deletar as mensagens. :x:");
    if(!args[0]) return message.reply("por favor, digite o número maior que 2 para deletar as mensagens.");
-   message.channel.bulkDelete(args[0]).then(() => {
-   message.channel.send(`Chat limpo! Limpado **${args[0]}** mensagens por ${message.author}.`).catch(error => message.reply(`Não posso deletar as mensagens por: ${error}`)).then(msg => msg.delete(5000));
+   message.channel.bulkDelete(args[0]).catch(error => message.reply(`Não posso deletar as mensagens por: ${error}`)).then(() => {
+   message.channel.send(`Chat limpo! Limpado **${args[0]}** mensagens por ${message.author}.`).then(msg => msg.delete(5000));
 });
    
 }
