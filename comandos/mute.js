@@ -5,8 +5,8 @@ module.exports.run = async (client, message, args) =>{
    message.delete().catch(O_o=>{});
    if (message.member.hasPermission('MANAGE_MESSAGES')) {
    const comousar = new Discord.RichEmbed()
+      .setURL("https://kally.glitch.me/")
       .setAuthor("Kally", client.user.avatarURL)
-      .setAuthorURL("https://kally.glitch.me/")
       .setTitle("k!mute")
       .setDescription(`Ira mutarIra mutar o usuário mencionado.`)
       .setColor("#60d1f6")
