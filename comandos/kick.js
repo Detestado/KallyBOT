@@ -17,19 +17,31 @@ module.exports.run = async (client, message, args) =>{
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.reply(comousarkick);
+      return message.channel.send(comousarkick);
     if(!member.kickable) 
       return message.reply("eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
     
-    // slice(1) removes the first part, which here should be the user mention or ID
-    // join(' ') takes all the various parts to make it a single string.
-    let reason = args.slice(1).join(' ');
-    if(!reason) reason = "No reason provided";
+    let motivo = args.slice(1).join(' ');
+    if(!motivo) motivo = "Não informado";
     
     // Now, time for a swift kick in the nuts!
-    await member.kick(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`${member.user.tag} foi kickado por ${message.author.tag} motivo: ${reason}`);
+    await member.kick(`Por: ${message.author.tag} | Motivo: ` + motivo)
+      .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
+    
+   const kickado = new Discord.RichEmbed()
+       .setAuthor(member.user.tag + ' | Kick', member.user.avatarURL)
+       .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi kickado! :worried: `)
+       .setColor("ff0000")
 
-   
+       .setThumbnail(member.user.avatarURL)
+
+       .setTimestamp()
+       .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
+
+        .addField("Motivo:", motivo)
+
+        .addField("Staffer:", message.author)
+        
+    message.channel.send(kickado)
+
 }
