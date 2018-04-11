@@ -6,9 +6,18 @@ module.exports.run = async (client, message, args) =>{
     if(!message.member.roles.some(r=>["⚒ Desenvolvedor"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
     
+    const comousar = new Discord.RichEmbed()
+      .setAuthor("Kally", client.user.avatarURL)
+      .setTitle("k!kick")
+      .setDescription(`Ira mutar o usuário mencionado.`)
+      .setColor("#60d1f6")
+      .setFooter("© Kally - kally.glitch.me")
+      .addField("Como usar", "`k!kick @usuário <motivo>`")
+      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Expulsar membros`")
+    
     let member = message.mentions.members.first();
     if(!member)
-      return message.reply("por favor, mencione um usuário valido. Você não mencionou o usuário ou ele não esta aqui no servidor. :x:");
+      return message.reply(comousar);
     if(!member.kickable) 
       return message.reply("eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
     
