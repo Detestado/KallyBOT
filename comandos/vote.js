@@ -8,12 +8,13 @@ module.exports.run = async (client, message, args) =>{
       return message.reply("por favor, digite a mensagem da votação!");
    const vote = new Discord.RichEmbed()
       .setAuthor("Votação")
-      .setDescription(mensg)
+      .setDescription("\n" + mensg)
       .setColor("#60d1f6")
       .setFooter("© Kally Votação")
    
-   message.channel.send("@everyone", vote)
-   client.message.react('👍')
-   client.message.react('👎')
-   client.message.react('❓')
+   message.channel.send("@everyone")
+   const m = await message.channel.send(vote)
+   m.react('👍')
+   m.react('👎')
+   m.react('❓')
 }
