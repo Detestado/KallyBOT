@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) =>{
       .addField("Como usar", "`k!limpar <número de mensagens MAIOR QUE 2>`")
       .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar mensagens`")
    
-   if(!args) return message.channel.send(comousar);
+   if(args == "") return message.channel.send(comousar);
    if(args == "2") return message.reply("por favor, digite o número maior que 2 para deletar as mensagens. :x:");
    if(args == "1") return message.reply("por favor, digite o número maior que 2 para deletar as mensagens. :x:");
    if(!args[0]) return message.reply("por favor, digite o número maior que 2 para deletar as mensagens.");
