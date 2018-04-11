@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) =>{
       .setTitle("k!mute")
       .setDescription(`Ira mutarIra mutar o usuário mencionado.`)
       .setColor("#60d1f6")
-      .setFooter("Kally WebSite: kally.glitch.me")
+      .setFooter("© Kally - kally.glitch.me")
       .addField("Como usar", "`k!mute @usuário <motivo>`")
       .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar mensagens`")
 
