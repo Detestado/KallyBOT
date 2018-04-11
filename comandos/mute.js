@@ -4,9 +4,18 @@ module.exports.run = async (client, message, args) =>{
 
    message.delete().catch(O_o=>{});
    if (message.member.hasPermission('MANAGE_MESSAGES')) {
+   const comousar = new Discord.RichEmbed()
+      .setAuthor(client.user.name, client.user.avatarURL)
+      .setTitle("k!mute")
+      .setURL("https://kally.glitch.me/")
+      .setDescription(`Ira mutarIra mutar o usuário mencionado.`)
+      .setColor("#60d1f6")
+      .addField("Como usar", "`k!mute @usuário <motivo>`")
+      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Gerenciar mensagens`")
+
    let member = message.mentions.members.first();
    if(!member)
-      return message.reply("Por favor, mencione um usuário valido. Você não mencionou o usuário ou ele não esta aqui no servidor. :x:");
+      return message.channel.send(comousar);
 
    let motivo = args.slice(1).join(' ');
    if(!motivo)
