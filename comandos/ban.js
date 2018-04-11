@@ -4,9 +4,17 @@ module.exports.run = async (client, message, args) =>{
 
    message.delete().catch(O_o=>{});
    if (message.member.hasPermission('BAN_MEMBERS')) {
+   const comousar = new Discord.RichEmbed()
+      .setAuthor("Kally", client.user.avatarURL)
+      .setTitle("k!ban")
+      .setDescription(`Ira banir o usuário mencionado.`)
+      .setColor("#60d1f6")
+      .setFooter("© Kally - kally.glitch.me")
+      .addField("Como usar", "`k!ban @usuário <motivo>`")
+      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Banir membros`")
    let member = message.mentions.members.first();
    if(!member)
-      return message.reply("Por favor, mencione um usuário valido. Você não mencionou o usuário ou ele não esta aqui no servidor. :x:");
+      return message.channel.send(comousar)
    if(!member.bannable) 
       return message.reply("Eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
 
