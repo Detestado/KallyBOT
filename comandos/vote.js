@@ -21,9 +21,9 @@ module.exports.run = async (client, message, args) =>{
       return message.channel.send(comousar);
    
    const vote = new Discord.RichEmbed()
-      .setAuthor("Votação")
-      .setDescription("\n" + mensg)
-      .setColor("#60d1f6")
+      .setTitle(":thinking: Votação")
+      .setDescription(`\n\n${mensg}`)
+      .setColor("#00ffa8")
       .setFooter(`Por: ${message.author.tag} - © Kally Votação`)
    
    message.channel.send("@everyone")
