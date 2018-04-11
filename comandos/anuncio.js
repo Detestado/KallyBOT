@@ -8,10 +8,10 @@ module.exports.run = async (client, message, args) =>{
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!anuncio")
-      .setDescription(`Ira mandar um anuncio no chat que o comandos foi executado.`)
+      .setDescription(`Ira mandar um anúncio no chat que o comandos foi executado.`)
       .setColor("#60d1f6")
       .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!anuncio @usuário <motivo>`")
+      .addField("Como usar", "`k!anuncio <mensagem do anúncio>`")
       .addField("Permissão", "O staff que for usar o comando tem que esta em um cargo com a permissão `Gerenciar servidor`")   
       
    let mensg = args.join(" ");
