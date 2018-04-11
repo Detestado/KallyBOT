@@ -18,5 +18,7 @@ module.exports.run = async (client, message, args) =>{
      
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
+  
+    message.channel.send(serverinfo)
     
  }
