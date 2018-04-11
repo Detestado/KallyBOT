@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) =>{
    if (message.member.hasPermission('MANAGE_MESSAGES')) {
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
-      .authorUrl("https://kally.glitch.me/")
+      .setAuthorURL("https://kally.glitch.me/")
       .setTitle("k!mute")
       .setDescription(`Ira mutarIra mutar o usuário mencionado.`)
       .setColor("#60d1f6")
