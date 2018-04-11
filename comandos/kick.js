@@ -3,48 +3,28 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
    message.delete().catch(O_o=>{});
-   if (message.member.hasPermission('BAN_MEMBERS')) {
-   const comousar = new Discord.RichEmbed()
-      .setAuthor("Kally", client.user.avatarURL)
-      .setTitle("k!kick")
-      .setDescription(`Ira kickar o usuário mencionado.`)
-      .setColor("#60d1f6")
-      .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!kick @usuário <motivo>`")
-      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Expulsar membros`")
-   let member = message.mentions.members.first();
-   if(!member)
-      return message.reply(comousar);
-   if(!member.kickable) 
-      return message.reply("eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
+    if(!message.member.roles.some(r=>["⚒ Desenvolvedor"].includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this!");
+    
+    // Let's first check if we have a member and if we can kick them!
+    // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
+    // We can also support getting the member by ID, which would be args[0]
+    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+    if(!member)
+      return message.reply("Please mention a valid member of this server");
+    if(!member.kickable) 
+      return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
+    
+    // slice(1) removes the first part, which here should be the user mention or ID
+    // join(' ') takes all the various parts to make it a single string.
+    let reason = args.slice(1).join(' ');
+    if(!reason) reason = "No reason provided";
+    
+    // Now, time for a swift kick in the nuts!
+    await member.kick(reason)
+      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+    message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
-   let motivo = args.slice(1).join(' ');
-   if(!motivo)
-      return message.reply("por favor, indique um motivo para o banimento!");
-  
-   await member.kick(`Por: ${message.author.tag} | Motivo: ` + motivo)
-      .catch(error => message.reply(`desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
-  
-   const kickado = new Discord.RichEmbed()
-       .setAuthor(member.user.tag + ' | Ban', member.user.avatarURL)
-       .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi kickado! :worried: `)
-       .setColor("ff0000")
-
-       .setThumbnail(member.user.avatarURL)
-
-       .setTimestamp()
-       .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
-
-        .addField("Motivo:", motivo)
-
-        .addField("Staffer:", message.author)
-        
-    message.channel.send(kickado)
-    } else {
-      message.reply("você não tem permissão! :x:")
   }
-   
-   
-   
    
 }
