@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) =>{
       .setColor("#60d1f6")
       .setFooter("© Kally Votação")
    
-   message.chennel.send("@everyone", vote);
+   message.channel.send("@everyone", vote)
    client.message.react('👍')
    client.message.react('👎')
    client.message.react('❓')
