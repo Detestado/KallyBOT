@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
     message.delete().catch(O_o=>{});
-    if(!message.member.roles.some(r=>["⚒ Desenvolvedor"].includes(r.name)) )
-      return message.reply("Sorry, you don't have permissions to use this!");
+    if(!message.member.hasPermission('KICK_MEMBERS'))
+      return message.reply("você não tem permissão! :x:");
     
     const comousarkick = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
