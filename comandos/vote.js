@@ -12,8 +12,8 @@ module.exports.run = async (client, message, args) =>{
       .setColor("#60d1f6")
       .setFooter("© Kally Votação")
    
-   const m = await message.chennel.send("@everyone", vote);
-   m.react('👍')
-   m.react('👎')
-   m.react('❓')
+   message.chennel.send("@everyone", vote);
+   client.message.react('👍')
+   client.message.react('👎')
+   client.message.react('❓')
 }
