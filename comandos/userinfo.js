@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) =>{
       .addField(":computer: Tag do discord", message.author.tag)   
       .addField(":bookmark_tabs: ID do discord", message.author.id) 
       .addField(":calendar_spiral: Criou conta em", message.author.createdAt)
-      .addField(":date: Entro em", message.member.joinedAt.toLocaleString())
+      .addField(":date: Entro em", message.member.joinedAt.day)
       .setThumbnail(message.author.avatarURL)
       .setColor("#00a4ce")
       .setFooter("© Kallyᴮᴱᵀᴬ")
