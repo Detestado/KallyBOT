@@ -11,8 +11,8 @@ module.exports.run = async (client, message, args) =>{
     .addField(':crown: Dono', message.guild.owner.user.tag)
     .addField(':busts_in_silhouette: Quantidade de membros', `${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size} (${message.guild.members.filter(m=>m.user.bot).size} bot(s))`)
     .addField(':earth_americas: Região', message.guild.region)
-    .addField(':calendar_spiral: Criado em', message.guild.createdAt.toLocaleString())
-    .addField(':calendar_spiral: Você entrou em', message.member.joinedAt.toLocaleString())
+    .addField(':calendar_spiral: Criado em', message.member.createdAt)
+    .addField(':calendar_spiral: Você entrou em', message.member.joinedAt)
     
     .setThumbnail(servericon)
      
