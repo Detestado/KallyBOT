@@ -13,8 +13,6 @@ client.on('ready', () =>{
 console.log('O Bot foi iniciado com sucesso.'.green);
 console.log(`O meu prefixo é ${prefix}`);
   
-client.user.setPresence({ game: { name: 'minha criação', type: 3 } });
-  
   
 });
 
