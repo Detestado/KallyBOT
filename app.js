@@ -10,8 +10,8 @@ var comandos = new Discord.Collection();
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () =>{
-console.log('==============================');
-console.log('\nCONECTADO! BOT ONLINE!');
+console.log('\n==============================');
+console.log('CONECTADO! BOT ONLINE!');
 console.log(`O meu prefixo é ${prefix}`);
 console.log('==============================');
   
