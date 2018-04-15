@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) =>{
       let msg = args.slice(1).join(' ');
       if(!msg) return message.reply('Use `k!teste <:thumbsup:/:one:> <msg>`');
       
-      if(tipo === ":thumbsup:")
+      if(tipo === ":thumbsup:") {
          const vote = new Discord.RichEmbed()
             .setTitle(":thinking: Votação")
             .setDescription(`\n\n${msg}`)
@@ -19,7 +19,8 @@ module.exports.run = async (client, message, args) =>{
          m.react('👍')
          m.react('👎')
          m.react('❓')
-      if(tipo === ":one:")
+      }
+      if(tipo === ":one:"){
          const vote = new Discord.RichEmbed()
             .setTitle(":thinking: Votação")
             .setDescription(`\n\n${msg}`)
@@ -29,6 +30,6 @@ module.exports.run = async (client, message, args) =>{
          m.react('1⃣')
          m.react('2⃣')
          m.react('3⃣')
-    
+      }
   }
 }
