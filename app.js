@@ -1,3 +1,4 @@
+console.log('Conectando...');
 const Discord = require('discord.js');
 const colors = require('colors');
 const client = new Discord.Client();
@@ -9,10 +10,12 @@ var comandos = new Discord.Collection();
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () =>{
-
-console.log('O Bot foi iniciado com sucesso.'.green);
+console.log('='*30);
+console.log('CONECTADO! BOT ONLINE!');
 console.log(`O meu prefixo é ${prefix}`);
+console.log('='*30);
   
+client.user.setPresence({ game: { name: 'kally.glitch.me | k!ajuda', type: 0 } });
   
 });
 
