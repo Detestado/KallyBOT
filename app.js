@@ -10,10 +10,10 @@ var comandos = new Discord.Collection();
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () =>{
-console.log('='*30);
-console.log('CONECTADO! BOT ONLINE!');
+console.log('==============================');
+console.log('\nCONECTADO! BOT ONLINE!');
 console.log(`O meu prefixo é ${prefix}`);
-console.log('='*30);
+console.log('==============================');
   
 client.user.setPresence({ game: { name: 'kally.glitch.me | k!ajuda', type: 0 } });
   
