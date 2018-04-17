@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) =>{
 
    if(message.member.id == "244537374258888725") {
 
-      let link = args.slice(0).join(' ');
+      let link = args[0];
       if(!link)
         return message.reply("por favor, coloque o link do convite do servidor!");      
       
