@@ -3,14 +3,14 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
    if(message.member.id == "244537374258888725") {
-   
-      let nome = args.slice(0).join(' ');
+
+      let link = args.slice(0).join(' ');
+      if(!link)
+        return message.reply("por favor, coloque o link do convite do servidor!");      
+      
+      let nome = args.slice(1).join(' ');
       if(!nome)
         return message.reply("por favor, digite o nome do servidor!");
-   
-      let link = args.slice(1).join(' ');
-      if(!link)
-        return message.reply("por favor, coloque o link do convite do servidor!");
         
       const parceiro = new Discord.RichEmbed()
         .setAuthor("NOVO PARCEIRO: " + nome)
