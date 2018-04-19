@@ -57,6 +57,11 @@ client.on('message', message =>{
 	  message.reply(`Obrigado! :relaxed: `)
 	  message.react("❤")
 	  message.react("😘")
+  	}
+	if(message.content == 'kally melhor bot'){
+	  message.reply(`Obrigado! :relaxed: `)
+	  message.react("❤")
+	  message.react("😘")
   }
 });
 
