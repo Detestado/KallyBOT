@@ -54,7 +54,6 @@ client.on('message', message =>{
 	  message.channel.send(`${ayy} | Olá ${message.author}, eu sou Kally, o bot mais lindo, ou não... meu prefix é ***k!***, para saber meus comandos digite ***k!ajuda***.`)
   	} 
 	if(message.content == 'Kally melhor bot'){
-	  const ayy = client.emojis.find("name", "Kally");
 	  message.reply(`Obrigado! :relaxed: `)
 	  message.react("❤")
 	  message.react("😘")
