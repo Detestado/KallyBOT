@@ -34,12 +34,11 @@ client.on("guildCreate", guild => {
 
   
 client.on("guildDelete", guild => {
-  console.log(`Fui removido do servidor: ${guild.name} (id: ${guild.id})`);
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
-     .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
+     .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
      .addField("Membros", `Com **${guild.memberCount}** membros`)
-     .addField("Dono", guild.owner)
+     .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
      .setColor("ff0000")
   
   
@@ -72,6 +71,13 @@ client.on('message', message =>{
            message.react("❤")
   }    
 });
+
+
+
+
+client.on("error", e => console.log(e));
+
+
 
 
 client.on('message', message =>{
