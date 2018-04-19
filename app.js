@@ -22,10 +22,10 @@ client.user.setPresence({ game: { name: 'kally.glitch.me | k!ajuda', type: 0 } }
 
 client.on("guildCreate", guild => {
    const entrei = new Discord.RichEmbed()
-      .setAuthor(`${guild.name} | Entrei`)
+      .setAuthor(`${guild.name} | Adicionado`)
       .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
       .addField("Membros", `Com **${guild.memberCount}** membros`)
-      .addField("Dono", guild.owner)
+      .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
       .setColor("00e7ff")
 
   
@@ -38,6 +38,7 @@ client.on("guildDelete", guild => {
   const entrei = new Discord.RichEmbed()
      .setAuthor(`${guild.name} | Removido`)
      .setDescription(`Fui removido do servidor **${guild.name}** (id: ${guild.id})!`)
+     .addField("Membros", `Com **${guild.memberCount}** membros`)
      .addField("Dono", guild.owner)
      .setColor("ff0000")
   
@@ -51,7 +52,13 @@ client.on('message', message =>{
 	if(message.content == '<@415288373071183872>'){
 	  const ayy = client.emojis.find("name", "Kally");
 	  message.channel.send(`${ayy} | Olá ${message.author}, eu sou Kally, o bot mais lindo, ou não... meu prefix é ***k!***, para saber meus comandos digite ***k!ajuda***.`)
-  }    
+  	} 
+	if(message.content == 'Kally melhor bot'){
+	  const ayy = client.emojis.find("name", "Kally");
+	  message.reply(`Obrigado! :relaxed: `)
+	  message.react("❤")
+	  message.react("😘")
+  }
 });
 
 client.on('message', message =>{
