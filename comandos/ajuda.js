@@ -21,7 +21,8 @@ module.exports.run = async (client, message, args) =>{
 **${prefix}ban** @usuário motivo - Ira banir o usuário mencionado do seu servidor do discord.
 **${prefix}anuncio** mensagem do anuncio - Ira mandar um anuncio no chat que o comandos foi executado.
 **${prefix}limpar** número de mensagens - Ira limpar o número de mensagens escolhido.
-**${prefix}kick** @usuário motivo - Ira kickar o usuário mencionado.`)
+**${prefix}kick** @usuário motivo - Ira kickar o usuário mencionado.
+**${prefix}aviso** @usuário motivo - Ira avisar o usuário mencionado.`)
       .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
       .setColor("#ff0000")
       .setFooter("© Kallyᴮᴱᵀᴬ Moderação")
