@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
     message.delete().catch(O_o=>{});
-    if(!message.member.hasPermission('KICK_MEMBERS'))
+    if(!message.member.hasPermission('MANAGE_MESSAGES'))
       return message.reply("você não tem permissão! :x:");
     
     const comousarkick = new Discord.RichEmbed()
