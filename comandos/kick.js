@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) =>{
       .setColor("#60d1f6")
       .setFooter("© Kally - kally.glitch.me")
       .addField("Como usar", "`k!kick @usuário <motivo>`")
-      .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Expulsar membros`")
+      .addField("Permissão", "O staff que for expulsar tem que esta em um cargo com a permissão `Expulsar membros`")
     
     let member = message.mentions.members.first();
     if(!member)
