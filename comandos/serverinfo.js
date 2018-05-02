@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const dateFormat = require('dateformat');
+
 const now = new Date();
 dateFormat(now, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
 
