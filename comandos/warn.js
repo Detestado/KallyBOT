@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) =>{
     if(!message.member.hasPermission('MANAGE_MESSAGES'))
       return message.reply("você não tem permissão! :x:");
     
-    const comousarkick = new Discord.RichEmbed()
+    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!warn")
       .setDescription(`Ira avisar o usuário mencionado.`)
@@ -17,9 +17,11 @@ module.exports.run = async (client, message, args) =>{
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send(comousarkick);
+      return message.channel.send(comousar);
     
     let motivo = args.slice(1).join(' ');
+    if(!motivo)
+      return message.channel.send(comousar);
     
     member.send("**AVISADO:** Você foi avisado pelo motivo: `" + motivo + "`");
     
