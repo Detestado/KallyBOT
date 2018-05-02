@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const now = new Date();
+dateFormat(now, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
 
 module.exports.run = async (client, message, args) =>{
 
@@ -11,7 +13,7 @@ module.exports.run = async (client, message, args) =>{
     .addField(':crown: Dono', message.guild.owner.user.tag)
     .addField(':busts_in_silhouette: Quantidade de membros', `${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size} (${message.guild.members.filter(m=>m.user.bot).size} bot(s))`)
     .addField(':earth_americas: Região', message.guild.region)
-    .addField(':calendar_spiral: Criado em', message.guild.createdAt.toLocaleString())
+    .addField(':calendar_spiral: Criado em', dateFormat(msg.guild.createdAt))
     .addField(':calendar_spiral: Você entrou em', message.member.joinedAt.toLocaleString())
     
     .setThumbnail(servericon)
