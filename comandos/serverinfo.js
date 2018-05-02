@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const dateFormat = require('dateformat');
 
 const now = new Date();
-dateFormat(now, 'd/m/yy');
+dateFormat(now, 'shortDate');
 
 module.exports.run = async (client, message, args) =>{
 
