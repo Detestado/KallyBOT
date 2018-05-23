@@ -24,8 +24,23 @@ module.exports.run = async (client, message, args) =>{
   
    await member.ban(`Por: ${message.author.tag} | Motivo: ` + motivo)
       .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
+      
+      
+   const banmsg = new Discord.RichEmbed()
+       .setAuthor('Você foi banido!', member.user.avatarURL)
+       .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi banido! :worried: `)
+       .setColor("ff0000")
+
+       .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
+
+       .setTimestamp()
+       .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
+
+        .addField("Motivo:", motivo)
+
+        .addField("Servidor", message.guild.name)  
   
-   member.send("Voce foi banido do servidor **" + message.guild.name + "**, motivo: **" + motivo + "**")   
+   member.send(banmsg)   
       
    const banido = new Discord.RichEmbed()
        .setAuthor(member.user.tag + ' | Ban', member.user.avatarURL)
