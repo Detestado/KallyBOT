@@ -101,7 +101,7 @@ if(!message.content.startsWith(prefix)) return;
    } catch (err) {
      const erro = new Discord.RichEmbed()
 	 .setAuthor(`Ops, esse comando não existe!`, message.author.avatarURL)
-	 .setDescription("Erros reporte para meu criador <@244537374258888725>, servidor de suporte [clique aqui](https://discord.gg/fsSNJJH)")
+	 .setDescription("Para saber meus comandos use `k!ajuda`\nErros reporte para meu criador <@244537374258888725>, servidor de suporte [clique aqui](https://discord.gg/fsSNJJH)")
 	 .setColor("ff0000")
 
 	 .setTimestamp()
