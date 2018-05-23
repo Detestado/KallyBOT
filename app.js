@@ -106,7 +106,7 @@ if(!message.content.startsWith(prefix)) return;
 
 	 .setTimestamp()
 	 .setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
-     client.channel.send(erro);
+     client.send(erro);
      const erro2 = new Discord.RichEmbed()
 	 .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`, message.author.avatarURL)
 	 .setDescription("```js\n" + err + "```")
