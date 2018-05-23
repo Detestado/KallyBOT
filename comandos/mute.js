@@ -52,7 +52,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
 
           .addField("Motivo:", motivo)
 
-          .addField("Servidor", message.guild.name)  
+          .addField("Servidor:", message.guild.name)  
   
        member.send(mutemsg)
         
