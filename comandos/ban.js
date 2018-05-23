@@ -28,7 +28,6 @@ module.exports.run = async (client, message, args) =>{
       
    const banmsg = new Discord.RichEmbed()
        .setAuthor('Você foi banido!', member.user.avatarURL)
-       .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi banido! :worried: `)
        .setColor("ff0000")
 
        .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
