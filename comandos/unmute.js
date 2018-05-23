@@ -38,6 +38,20 @@ Crie um cargo com o nome "**Mutado**", assim poderei desmutar o usuário!`)
         let role = message.guild.roles.find("name", "Mutado");
         member.removeRole(role)
         
+        const unmutemsg = new Discord.RichEmbed()
+             .setAuthor('Você foi desmutado!', member.user.avatarURL)
+             .setColor("ff0000")
+
+             .setThumbnail(member.user.avatarURL)
+
+             .setTimestamp()
+             .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
+
+
+             .addField("Servidor", message.guild.name)  
+
+        member.send(unmutemsg)
+        
         const mutado = new Discord.RichEmbed()
            .setAuthor(member.user.tag + ' | Mute', member.user.avatarURL)
            .setDescription(`${member.user.tag} (ID: ${member.user.id}) foi desmutado! HEEYY! Agora respeite as regras. :wink: `)
