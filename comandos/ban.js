@@ -25,6 +25,8 @@ module.exports.run = async (client, message, args) =>{
    await member.ban(`Por: ${message.author.tag} | Motivo: ` + motivo)
       .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
   
+   member.send("Voce foi banido do servidor **" + message.guild.name + "**, motivo: **" + motivo + "**")   
+      
    const banido = new Discord.RichEmbed()
        .setAuthor(member.user.tag + ' | Ban', member.user.avatarURL)
        .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi banido! :worried: `)
