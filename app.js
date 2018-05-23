@@ -109,7 +109,7 @@ if(!message.content.startsWith(prefix)) return;
      client.channel.send(erro);
      const erro2 = new Discord.RichEmbed()
 	 .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`, message.author.avatarURL)
-	 .setDescription("```js\n" + err + "```)
+	 .setDescription("```js\n" + err + "```")
 	 .setColor("ff0000")
 	
 	 .setTimestamp()
