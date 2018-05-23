@@ -32,6 +32,8 @@ module.exports.run = async (client, message, args) =>{
        .setAuthor('Você foi kikado!', member.user.avatarURL)
        .setColor("ff0000")
 
+       .setThumbnail(member.user.avatarURL)
+   
        .setTimestamp()
        .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
 
