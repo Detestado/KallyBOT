@@ -28,6 +28,19 @@ module.exports.run = async (client, message, args) =>{
     await member.kick(`Por: ${message.author.tag} | Motivo: ` + motivo)
       .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
     
+   const kickmsg = new Discord.RichEmbed()
+       .setAuthor('Você foi kikado!', member.user.avatarURL)
+       .setColor("ff0000")
+
+       .setTimestamp()
+       .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
+
+        .addField("Motivo:", motivo)
+
+        .addField("Servidor", message.guild.name)  
+  
+   member.send(kickmsg)
+    
    const kickado = new Discord.RichEmbed()
        .setAuthor(member.user.tag + ' | Kick', member.user.avatarURL)
        .setDescription(`${member.user.tag} (ID: ${member.user.id}) não respeitou as regras e foi kickado! :worried: `)
