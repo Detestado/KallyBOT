@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) =>{
 
         .addField("Motivo:", motivo)
 
-        .addField("Servidor", message.guild.name)  
+        .addField("Servidor:", message.guild.name)  
   
    member.send(banmsg)   
       
