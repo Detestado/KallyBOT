@@ -48,7 +48,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei desmutar o usuário!`)
              .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
 
 
-             .addField("Servidor", message.guild.name)  
+             .addField("Servidor:", message.guild.name)  
 
         member.send(unmutemsg)
         
