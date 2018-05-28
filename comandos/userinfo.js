@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) =>{
       .setThumbnail(member.user.avatarURL)
       .addField(':computer: ID:', member.user.id)
       .addField(":video_game: Jogando:", `${member.user.presence.game ? `${member.user.presence.game.name}` : "Não está jogando."}`)
-      .addField(':red_circle: Cargos', member.user.roles.map(r => r).join(', '))
+      .addField(':red_circle: Cargos', member.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "Sem cargo")
       .addField(':inbox_tray: Entrou nesse servidor em:', dateFormat(member.joinedAt, 'dd/mm/yyyy') + " às " + dateFormat(member.joinedAt, 'H:MM'))
       .addField(':inbox_tray: Conta criado em:', dateFormat(member.user.createdAt, 'dd/mm/yyyy') + " às " + dateFormat(member.user.createdAt, 'H:MM'))
       .setColor("#00a4ce")
