@@ -16,8 +16,8 @@ module.exports.run = async (client, message, args) =>{
       .setThumbnail(member.user.avatarURL)
       .addField(':computer: ID:', member.user.id)
       .addField(":video_game: Jogando:", `${member.user.presence.game ? `${member.user.presence.game.name}` : "Não está jogando."}`)
-      .addField(':inbox_tray: Entrou nesse servidor em:', dateFormat(member.joinedAt, 'dd/mm/yyyy'))
-      .addField(':inbox_tray: Conta criado em:', dateFormat(member.user.createdAt, 'dd/mm/yyyy'))
+      .addField(':inbox_tray: Entrou nesse servidor em:', dateFormat(member.joinedAt, 'dd/mm/yyyy') + " às " + dateFormat(member.joinedAt, 'H:MM'))
+      .addField(':inbox_tray: Conta criado em:', dateFormat(member.user.createdAt, 'dd/mm/yyyy') + " às " + dateFormat(member.user.createdAt, 'H:MM'))
       .setColor("#00a4ce")
       .setFooter("© Kally")
    
@@ -31,8 +31,8 @@ module.exports.run = async (client, message, args) =>{
     .setThumbnail(message.author.avatarURL)
     .addField(':computer: ID:', message.author.id)
     .addField(":video_game: Jogando:", `${message.author.presence.game ? `${message.author.presence.game.name}` : "Não está jogando."}`)
-    .addField(':inbox_tray: Entrou nesse servidor em:', dateFormat(message.author.joinedAt, 'dd/mm/yyyy'))
-    .addField(':inbox_tray: Conta criado em:', dateFormat(message.author.createdAt, 'dd/mm/yyyy'))
+    .addField(':inbox_tray: Entrou nesse servidor em:', dateFormat(message.author.joinedAt, 'dd/mm/yyyy') + " às " + dateFormat(message.author.joinedAt, 'H:MM'))
+    .addField(':inbox_tray: Conta criado em:', dateFormat(message.author.createdAt, 'dd/mm/yyyy') + " às " + dateFormat(message.author.createdAt, 'H:MM'))
     .setColor("#00a4ce")
     .setFooter("© Kally")
  
