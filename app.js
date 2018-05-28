@@ -15,7 +15,7 @@ console.log('CONECTADO! BOT ONLINE!');
 console.log(`O meu prefixo é ${prefix}`);
 console.log('==============================');
   
-client.user.setPresence({ game: { name: 'kally.glitch.me | k!ajuda', type: 0 } });
+client.user.setPresence({ game: { name: 'k!ajuda | k!convite', type: 0 } });
   
 });
 
