@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) =>{
     .setThumbnail(message.author.avatarURL)
     .addField(':computer: ID:', message.author.id)
     .addField(":video_game: Jogando:", `${message.author.presence.game ? `${message.author.presence.game.name}` : "Não está jogando."}`)
-    .addField(':red_circle: Cargos', message.author.roles.map(r => r).join(', '))
+    .addField(':red_circle: Cargos', message.author.roles.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "Sem cargo")
     .addField(':inbox_tray: Entrou nesse servidor em:', dateFormat(message.author.joinedAt, 'dd/mm/yyyy') + " às " + dateFormat(message.author.joinedAt, 'H:MM'))
     .addField(':inbox_tray: Conta criado em:', dateFormat(message.author.createdAt, 'dd/mm/yyyy') + " às " + dateFormat(message.author.createdAt, 'H:MM'))
     .setColor("#00a4ce")
