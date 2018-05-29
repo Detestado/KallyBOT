@@ -94,10 +94,21 @@ if(!message.content.startsWith(prefix)) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  const allargs = args.join(" ");
   
   try {
     let commandFile = require(`./comandos/${command}.js`);
     commandFile.run(client, message, args);
+	  
+    const cmd = new Discord.RichEmbed()
+	.setAuthor(`k!${command}`, message.author.avatarURL)
+	.setDescription("\n**EXECUTADO POR " + message.author.tag + "**\n```k!" + command + " " + allargs + "```")
+	.setColor("f1ff12")
+		
+	.setTimestamp()
+	.setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
+    client.channels.get("432603458269609986").send(cmd);
+	  
    } catch (err) {
      const erro = new Discord.RichEmbed()
 	 .setAuthor(`Ops, esse comando não existe!`, message.author.avatarURL)
@@ -107,6 +118,7 @@ if(!message.content.startsWith(prefix)) return;
 	 .setTimestamp()
 	 .setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
      message.channel.send(erro);
+	   
      const erro2 = new Discord.RichEmbed()
 	 .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`, message.author.avatarURL)
 	 .setDescription("```js\n" + err + "```")
