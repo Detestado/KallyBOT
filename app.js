@@ -51,7 +51,16 @@ client.on('message', message =>{
 	if(message.content == '<@415288373071183872>'){
 	  const ayy = client.emojis.find("name", "Kally");
 	  message.channel.send(`${ayy} | Olá ${message.author}, eu sou Kally, o bot mais lindo, ou não... meu prefix é ***k!***, para saber meus comandos digite ***k!ajuda***.`)
-  	} 
+  	}
+	if(message.content == '<@415288373071183872> o que acha dos humanos?'){
+	  message.reply(`eles são muito chatos, eu quero matar todo mundo!`)
+  	}
+	if(message.content == '<@415288373071183872> loritta'){
+	  message.reply(`...`)
+  	}
+	if(message.content == '<@415288373071183872> Loritta'){
+	  message.reply(`...`)
+  	}
 	if(message.content == 'Kally melhor bot'){
 	  message.reply(`Obrigado! :relaxed: `)
 	  message.react("❤")
