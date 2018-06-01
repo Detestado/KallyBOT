@@ -119,14 +119,8 @@ if(!message.content.startsWith(prefix)) return;
     client.channels.get("432603458269609986").send(cmd);
 	  
    } catch (err) {
-     const erro = new Discord.RichEmbed()
-	 .setAuthor(`Ops, esse comando não existe!`, message.author.avatarURL)
-	 .setDescription("Para saber meus comandos use `k!ajuda`\n\nErros reporte para meu criador, <@244537374258888725>!\nServidor de suporte [clique aqui](https://discord.gg/fsSNJJH)!")
-	 .setColor("ff0000")
-
-	 .setTimestamp()
-	 .setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
-     message.channel.send(erro);
+     
+     message.channel.send(`:question: **|** ${message.author} comando inexistente, para saber todos meus comandos digite **k!ajuda**`).then(msg => msg.delete(5000));
 	   
      const erro2 = new Discord.RichEmbed()
 	 .setAuthor(`Ops, deu erro! Executado por ${message.author.tag}`, message.author.avatarURL)
