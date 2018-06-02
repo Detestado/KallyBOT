@@ -4,6 +4,7 @@ const colors = require('colors');
 const client = new Discord.Client();
 const preferencias = require('./config.json');
 const prefix = preferencias.prefix;
+const prefixow = preferencias.prefixow;
 const fs = require('fs');
 var comandos = new Discord.Collection();
 
@@ -140,4 +141,40 @@ if(!message.content.startsWith(prefix)) return;
      client.channels.get("429844583766294530").send(erro2);
    }
   
+});
+
+// COMANDOS DO CRIADOR DO KALLY
+client.on('message', message =>{
+
+	var autor = message.author;
+	var msg = message.content.toUpperCase();
+	var cont = message.content.slice(prefixow.lenght).split('');
+	if(message.channel.type === "dm") return;
+	if(!message.content.startsWith(prefixow)) return;
+	const KallyEmoji = client.emojis.find("name", "Kally");
+	if(autor != "244537374258888725") return message.reply("essa funçao esta disponível somente para o desenvolvedor do bot! " + KallyEmoji);
+	// ban
+	//if(message.author.id === "244537374258888725" || message.author.id === "244537374258888725") return;
+	//if(message.author.id === "244537374258888725") return;
+	
+	  const args = message.content.slice(prefixow.length).trim().split(/ +/g);
+		const command = args.shift().toLowerCase();
+		const allargs = args.join(" ");
+	  
+	  try {
+		let commandFile = require(`./comando_kally/${command}.js`);
+			commandFile.run(client, message, args);
+			const cmd = new Discord.RichEmbed()
+				.setAuthor(`k!${command}`, message.author.avatarURL)
+				.setDescription("\n**EXECUTADO POR " + message.author.tag + "**\n```k!" + command + " " + allargs + "```")
+				.setColor("dd1956")
+			
+				.setTimestamp()
+				.setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
+			client.channels.get("432603458269609986").send(cmd);
+	   } catch (err) {
+		
+			console.error("COMANDO NÃO ENCONTRADO!")
+		
+		}
 });
