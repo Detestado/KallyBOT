@@ -124,7 +124,7 @@ if(!message.content.startsWith(prefix)) return;
 	.setColor("f1ff12")
 		
 	.setTimestamp()
-	.setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
+	.setFooter(`Servidor: ${message.guild.name} e Canal: ${message.channel.name}`, message.guild.iconURL)
     client.channels.get("432603458269609986").send(cmd);
 	  
    } catch (err) {
@@ -137,7 +137,7 @@ if(!message.content.startsWith(prefix)) return;
 	 .setColor("ff0000")
 	
 	 .setTimestamp()
-	 .setFooter(`Servidor: ${message.guild.name}`, message.guild.iconURL)
+	 .setFooter(`Servidor: ${message.guild.name} e Canal: ${message.channel.name}`, message.guild.iconURL)
      client.channels.get("429844583766294530").send(erro2);
    }
   
