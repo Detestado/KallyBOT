@@ -152,7 +152,7 @@ client.on('message', message =>{
 	if(message.channel.type === "dm") return;
 	if(!message.content.startsWith(prefixow)) return;
 	const KallyEmoji = client.emojis.find("name", "Kally");
-	if(autor != "244537374258888725") return message.reply("essa funçao esta disponível somente para o desenvolvedor do bot! " + KallyEmoji);
+	if(autor.id != "244537374258888725") return message.reply("essa funçao esta disponível somente para o desenvolvedor do bot! " + KallyEmoji);
 	// ban
 	//if(message.author.id === "244537374258888725" || message.author.id === "244537374258888725") return;
 	//if(message.author.id === "244537374258888725") return;
