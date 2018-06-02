@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) =>{
       return message.channel.send(comousar)
       
    const anuncio = new Discord.RichEmbed()
-      .setColor("0cff00")
+      .setColor('#'+Math.floor(Math.random()*16777215).toString(16))
       .setAuthor("Anúncio", "https://cdn.discordapp.com/attachments/409846357982183434/429837842697682955/emoji.png")
       
       .setDescription(mensg)
