@@ -15,16 +15,7 @@ module.exports.run = async (client, message, args) =>{
     guild.leave()
     message.reply(`você me removeu do servidor ${servidornome}! :white_check_mark:`)
 
-    const sai = new Discord.RichEmbed()
-        .setAuthor(`${guild.name} | Removido`)
-        .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
-        .setColor("#ff0000")
-        .addField("Membros", `Com **${guild.memberCount}** membros`)
-        .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
-
-        .setFooter(`${message.author.tag} me removeu do servidor!`, guild.iconURL)
-
-    client.channels.get("429844744110211072").send(sai);
+    client.channels.get("429844744110211072").send(`**Removido por ${message.author}!**`);
 
 
    
