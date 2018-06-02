@@ -32,6 +32,26 @@ client.on("guildCreate", guild => {
    client.channels.get("429844744110211072").send(entrei);
 });
 
+client.on("guildCreate", guild => {
+	if(guild.id === "1" || guild.id === "2"){
+		//BANIR SERVIDORES DE USAR O KALLY
+		guild.owner.send(`O seu servidor (**${guild.name}**) foi banido do Kally e não vai poder usar o bot Kally! **Para saber o motivo do banimento entre em https://discord.gg/fsSNJJH**`)
+		guild.leave()
+	}else{
+		const entrei = new Discord.RichEmbed()
+			.setAuthor(`${guild.name} | Adicionado`)
+			.setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
+			.addField("Membros", `Com **${guild.memberCount}** membros`)
+			.addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
+			.setColor("00e7ff")
+  
+	
+	 	client.channels.get("429844744110211072").send(entrei);
+	
+	}
+});
+
+
   
 client.on("guildDelete", guild => {
   const entrei = new Discord.RichEmbed()
