@@ -52,21 +52,6 @@ client.on("guildCreate", guild => {
 });
 
 
-  
-client.on("guildDelete", guild => {
-  const entrei = new Discord.RichEmbed()
-     .setAuthor(`${guild.name} | Removido`)
-     .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
-     .addField("Membros", `Com **${guild.memberCount}** membros`)
-     .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
-     .setColor("ff0000")
-  
-  
-  
-  
-  client.channels.get("429844744110211072").send(entrei);
-});
-
 client.on('message', message =>{
 	if(message.content == '<@415288373071183872>'){
 	  const ayy = client.emojis.find("name", "Kally");
