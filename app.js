@@ -20,17 +20,6 @@ client.user.setPresence({ game: { name: 'k!ajuda | k!convite', type: 0 } });
 });
 
 
-client.on("guildCreate", guild => {
-   const entrei = new Discord.RichEmbed()
-      .setAuthor(`${guild.name} | Adicionado`)
-      .setDescription(`Entrei no servidor **${guild.name}** (id: ${guild.id})`)
-      .addField("Membros", `Com **${guild.memberCount}** membros`)
-      .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
-      .setColor("00e7ff")
-
-  
-   client.channels.get("429844744110211072").send(entrei);
-});
 
 client.on("guildCreate", guild => {
 	if(guild.id === "1" || guild.id === "2"){
@@ -50,6 +39,20 @@ client.on("guildCreate", guild => {
 	
 	}
 });
+
+client.on("guildDelete", guild => {
+  const entrei = new Discord.RichEmbed()
+     .setAuthor(`${guild.name} | Removido`)
+     .setDescription(`Fui removido do servidor **${guild.name}** (ID: ${guild.id})!`)
+     .addField("Membros", `Com **${guild.memberCount}** membros`)
+     .addField("Dono", `${guild.owner} (ID: ${guild.owner.id})`)
+     .setColor("ff0000")
+  
+ 
+  
+  client.channels.get("429844744110211072").send(entrei);
+});
+
 
 
 client.on('message', message =>{
