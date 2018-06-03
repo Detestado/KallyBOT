@@ -4,6 +4,23 @@ module.exports.run = async (client, message, args) =>{
 
    message.delete().catch(O_o=>{});
    if (message.member.hasPermission('MANAGE_MESSAGES')) {
+   if (!message.guild.roles.find("name", "Mutado") {
+      
+      const norole = new Discord.RichEmbed()
+         .setColor("ff0000")
+         .setAuthor('Deu um erro', client.user.avatarURL)
+         
+         .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
+Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
+      
+      
+         .setTimestamp()
+         .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
+      
+      message.channel.send(norole)
+      
+      
+   }
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!mute")
@@ -21,7 +38,7 @@ module.exports.run = async (client, message, args) =>{
    if(!motivo)
       return message.reply("Por favor, indique um motivo para o mute!");
 
-   if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
+   if (!message.guild.roles.find("name", "Mutado")) {
       
       const norole = new Discord.RichEmbed()
          .setColor("ff0000")
