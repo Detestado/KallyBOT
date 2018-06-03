@@ -153,7 +153,7 @@ client.on('message', message =>{
 	if(!message.content.startsWith(prefixow)) return;
 	const KallyEmoji = client.emojis.find("name", "Kally");
 	const emojinop = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
-	if(autor.id != "244537374258888725") return message.reply(`essa função esta disponível somente para o desenvolvedor do bot! ${kallynop}`);
+	if(autor.id != "244537374258888725") return message.reply(`essa função esta disponível somente para o desenvolvedor do bot! ${emojinop}`);
 	// ban
 	//if(message.author.id === "244537374258888725" || message.author.id === "244537374258888725") return;
 	//if(message.author.id === "244537374258888725") return;
