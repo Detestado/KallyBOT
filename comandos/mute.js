@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) =>{
            .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
 Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
         
-        
+           .addField("Info", "Coloque o cargo **Mutado** em cima dos cargo que eu vou poder mutar e coloque o cargo do bot (**Cargo chama Kally**) em cima do cargo **Mutado**! Obrigado.")
            .setTimestamp()
            .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
         
@@ -46,7 +46,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
          .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
 Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
       
-      
+         .addField("Info", "Coloque o cargo **Mutado** em cima dos cargo que eu vou poder mutar e coloque o cargo do bot (**Cargo chama Kally**) em cima do cargo **Mutado**! Obrigado.")
          .setTimestamp()
          .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
       
