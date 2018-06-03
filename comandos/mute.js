@@ -19,7 +19,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
             message.channel.send(norole)
       
       
-    }
+    } else {
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
       .setTitle("k!mute")
@@ -92,4 +92,5 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
    } else {
       message.reply("você não tem permissão! :x:")
   }
+}
 }
