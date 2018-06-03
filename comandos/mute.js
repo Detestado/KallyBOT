@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) =>{
    if(!motivo)
       return message.reply("Por favor, indique um motivo para o mute!");
 
-   if (!message.guild.roles.find("name", "Mutado")) {
+   if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
       
       const norole = new Discord.RichEmbed()
          .setColor("ff0000")
@@ -75,5 +75,4 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
    } else {
       message.reply("você não tem permissão! :x:")
   }
-}
 }
