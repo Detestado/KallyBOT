@@ -2,6 +2,23 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) =>{
 
+   if (message.member.hasPermission('MANAGE_MESSAGES')) {
+    if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
+        const norole = new Discord.RichEmbed()
+           .setColor("ff0000")
+           .setAuthor('Deu um erro', client.user.avatarURL)
+           
+           .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
+Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
+        
+        
+           .setTimestamp()
+           .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
+        
+        message.channel.send(norole)
+        
+        
+    }
    message.delete().catch(O_o=>{});
    const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
@@ -71,8 +88,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
         
         message.channel.send(mutado)
      }
-  
-   } else {
-      message.reply("você não tem permissão! :x:")
-  }
+    } else {
+        message.reply("você não tem permissão! :x:")
+    }
 }
