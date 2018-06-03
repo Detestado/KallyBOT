@@ -113,7 +113,6 @@ if(!message.content.startsWith(prefix)) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   const allargs = args.join(" ");
-  const emojiaviso = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
   
   try {
     let commandFile = require(`./comandos/${command}.js`);
@@ -153,7 +152,8 @@ client.on('message', message =>{
 	if(message.channel.type === "dm") return;
 	if(!message.content.startsWith(prefixow)) return;
 	const KallyEmoji = client.emojis.find("name", "Kally");
-	if(autor.id != "244537374258888725") return message.reply("essa função esta disponível somente para o desenvolvedor do bot! " + KallyEmoji);
+	const emojinop = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
+	if(autor.id != "244537374258888725") return message.reply(`essa função esta disponível somente para o desenvolvedor do bot! ${kallynop}`);
 	// ban
 	//if(message.author.id === "244537374258888725" || message.author.id === "244537374258888725") return;
 	//if(message.author.id === "244537374258888725") return;
