@@ -5,7 +5,7 @@ const prefix = configP.prefix;
 module.exports.run = async (client, message, args) =>{
    
    const emojicarregando = client.guilds.get("420316735149965322").emojis.find("name", "KallyCarregando");
-   message.channel.send(`${message.author}, irei mandar a lista de comandos no seu privado! ${emojicarregando}`).then(msg => msg.delete(5000));
+   message.channel.send(`${message.author}, irei mandar a lista de comandos no seu privado! ${emojicarregando}`).then(msg => msg.delete(6000));
    const ajuda1 = new Discord.RichEmbed()
       .setAuthor(`Ajudinha do Kally`)
       .setDescription(`Olá, ${message.author}, aqui esta todos meus comandos!`)
