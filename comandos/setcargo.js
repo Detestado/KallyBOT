@@ -10,9 +10,9 @@ module.exports.run = async (client, message, args) =>{
        .setDescription(`Ira adicionar o cargo ao usuário mencionado.`)
        .setColor("#60d1f6")
        .setFooter("© Kally - kally.glitch.me")
-       .addField("Como usar", "`k!setcargo @usuário <nome do cargo>`")
+       .addField("Como usar", "`k!setcargo @usuário <nome do cargo SEM O @>`")
        .addField("Permissão", "O staff que for adicinar o cargo tem que está em um cargo com a permissão `Gerenciar cargos`")
-       .addField("Info", "A **minha** permissão tem que está **acima dos cargos** que eu vou adicionar!")
+       .addField("Info", "A **minha** permissão tem que está **acima dos cargos** que eu vou adicionar e o nome do cargo tem que ser **sem o @**!")
 
    let member = message.mentions.members.first();
    if(!member)
@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) =>{
            .setColor("ff0000")
            .setAuthor('Deu um erro', client.user.avatarURL)
            
-           .setDescription(`${message.author}, o cargo **${rolename}** não existe (**OBS:** Coloque o nome do cargo certo, emojis, minúsculo e maiúsculo nos lugares certos.)`)
+           .setDescription(`${message.author}, o cargo **${rolename}** não existe (**OBS:** Coloque o nome do cargo certo, emojis, minúsculo e maiúsculo nos lugares certos **e SEM O @***.)`)
         
         
            .setTimestamp()
