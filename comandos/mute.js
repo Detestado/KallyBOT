@@ -16,7 +16,7 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
            .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
         
         message.channel.send(norole)
-        
+        break;
         
     }
    message.delete().catch(O_o=>{});
