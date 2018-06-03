@@ -113,6 +113,7 @@ if(!message.content.startsWith(prefix)) return;
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   const allargs = args.join(" ");
+  const emojiaviso = client.guilds.get("420316735149965322").emojis.find("name", "KallyNop");
   
   try {
     let commandFile = require(`./comandos/${command}.js`);
