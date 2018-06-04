@@ -17,9 +17,9 @@ module.exports.run = async (client, message, args) =>{
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send(comousarkick);
+      return message.channel.send(comousarkick).then(msg => msg.delete(10000));
     if(!member.kickable) 
-      return message.reply("eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
+      return message.reply("eu não posso expulsar esse usuário! Ele(a) têm um cargo maior.").then(msg => msg.delete(8000));
     
     let motivo = args.slice(1).join(' ');
     if(!motivo) motivo = "Não informado";
