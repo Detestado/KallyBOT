@@ -17,11 +17,11 @@ module.exports.run = async (client, message, args) =>{
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.channel.send(comousar);
+      return message.channel.send(comousar).then(msg => msg.delete(10000));
     
     let motivo = args.slice(1).join(' ');
     if(!motivo)
-      return message.channel.send(comousar);
+      return message.channel.send(comousar).then(msg => msg.delete(10000));
     
     member.send("**AVISADO:** Você foi avisado pelo motivo: `" + motivo + "`");
     
