@@ -14,13 +14,13 @@ module.exports.run = async (client, message, args) =>{
       .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Banir membros`")
    let member = message.mentions.members.first();
    if(!member)
-      return message.channel.send(comousar)
+      return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
    if(!member.bannable) 
       return message.reply("Eu não posso banir esse usuário! Ele(a) têm um cargo maior.");
 
    let motivo = args.slice(1).join(' ');
    if(!motivo)
-      return message.reply("Por favor, indique um motivo para o banimento!");
+      return message.reply("por favor, indique um motivo para o banimento!").then(msg => msg.delete(6000));
   
    await member.ban(`Por: ${message.author.tag} | Motivo: ` + motivo)
       .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
