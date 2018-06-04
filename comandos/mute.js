@@ -8,14 +8,14 @@ module.exports.run = async (client, message, args) =>{
            .setColor("ff0000")
            .setAuthor('Deu um erro', client.user.avatarURL)
            
-           .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
+           .setDescription(`O cargo **Mutado** não foi encontrado. :slight_frown: 
 Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
         
            .addField("Info", "Coloque o cargo **Mutado** em cima dos cargo que eu vou poder mutar e coloque o cargo do bot (**Cargo chama Kally**) em cima do cargo **Mutado**! Obrigado.")
            .setTimestamp()
            .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
         
-        message.channel.send(norole)
+        message.channel.send(message.author, norole)
         return;
         
     }
@@ -31,11 +31,11 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
 
    let member = message.mentions.members.first();
    if(!member)
-      return message.channel.send(comousar);
+      return message.channel.send(comousar).then(msg => msg.delete(10000));
 
    let motivo = args.slice(1).join(' ');
    if(!motivo)
-      return message.reply("Por favor, indique um motivo para o mute!");
+      return message.reply("Por favor, indique um motivo para o mute!").then(msg => msg.delete(10000));
 
    if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
       
@@ -43,14 +43,14 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
          .setColor("ff0000")
          .setAuthor('Deu um erro', client.user.avatarURL)
          
-         .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
+         .setDescription(`O cargo **Mutado** não foi encontrado. :slight_frown: 
 Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
       
          .addField("Info", "Coloque o cargo **Mutado** em cima dos cargo que eu vou poder mutar e coloque o cargo do bot (**Cargo chama Kally**) em cima do cargo **Mutado**! Obrigado.")
          .setTimestamp()
          .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
       
-      message.channel.send(norole)
+      message.channel.send(message.author, norole)
       
       
      } else {
@@ -89,6 +89,6 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
         message.channel.send(mutado)
      }
     } else {
-        message.reply("você não tem permissão! :x:")
+        message.reply("você não tem permissão! :x:").then(msg => msg.delete(5000));
     }
 }
