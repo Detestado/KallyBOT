@@ -31,11 +31,11 @@ Crie um cargo com o nome "**Mutado**", assim poderei mutar o usuário!`)
 
    let member = message.mentions.members.first();
    if(!member)
-      return message.channel.send(comousar).then(msg => msg.delete(10000));
+      return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
 
    let motivo = args.slice(1).join(' ');
    if(!motivo)
-      return message.reply("Por favor, indique um motivo para o mute!").then(msg => msg.delete(10000));
+      return message.reply("por favor, indique um motivo para o mute!").then(msg => msg.delete(10000));
 
    if (!message.guild.roles.find("name", "Mutado") || message.guild.roles.find("name", "mutado")) {
       
