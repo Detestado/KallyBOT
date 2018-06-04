@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) =>{
       
    let member = message.mentions.members.first();
    if(!member)
-      return message.channel.send(comousar)
+      return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
 
    if (!message.guild.roles.find("name", "Mutado")) {
       
@@ -24,14 +24,14 @@ module.exports.run = async (client, message, args) =>{
          .setColor("ff0000")
          .setAuthor('Deu um erro', client.user.avatarURL)
          
-         .setDescription(`${message.author}, o cargo **Mutado** não foi encontrado. :slight_frown: 
+         .setDescription(`O cargo **Mutado** não foi encontrado. :slight_frown: 
 Crie um cargo com o nome "**Mutado**", assim poderei desmutar o usuário!`)
       
       
          .setTimestamp()
          .setFooter("© Kallyᴮᴱᵀᴬ ERRO", message.author.avatarURL)
       
-      message.channel.send(norole)
+      message.channel.send(message.author, norole)
       
       
      } else {
@@ -69,6 +69,6 @@ Crie um cargo com o nome "**Mutado**", assim poderei desmutar o usuário!`)
      }
   
    } else {
-      message.reply("você não tem permissão! :x:")
+      message.reply("você não tem permissão! :x:").then(msg => msg.delete(6000));
   }
 }
