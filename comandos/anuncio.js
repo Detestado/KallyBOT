@@ -29,5 +29,7 @@ module.exports.run = async (client, message, args) =>{
    
    message.channel.send("@everyone", anuncio)
    
+   }else {
+      message.reply("você não tem permissão! :x:").then(msg => msg.delete(10000));
    }
 }
