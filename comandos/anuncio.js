@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) =>{
       
    let mensg = args.join(" ");
    if(!mensg)
-      return message.channel.send(comousar).then(msg => msg.delete(10000));
+      return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
    const emojiaviso = client.guilds.get("420316735149965322").emojis.find("name", "KallyAviso");
    const anuncio = new Discord.RichEmbed()
       .setColor('#'+Math.floor(Math.random()*16777215).toString(16))
