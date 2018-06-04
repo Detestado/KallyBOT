@@ -87,7 +87,12 @@ client.on('message', message =>{
 	   message.react("👍")
 	   message.react("👎")
            message.react("❤")
-  }    
+  } 
+	if(message.channel.id == "453253638442188800" ){
+	   message.react("👍")
+	   message.react("👎")
+           message.react("❤")
+  }  
 });
 
 
