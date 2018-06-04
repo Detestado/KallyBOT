@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) =>{
    message.delete().catch(O_o=>{});
    
     if(!message.member.hasPermission('MANAGE_GUILD'))
-      return message.reply("você não tem permissão! :x:");
+      return message.reply("você não tem permissão! :x:").then(msg => msg.delete(6000));
     
     const comousar = new Discord.RichEmbed()
       .setAuthor("Kally", client.user.avatarURL)
@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) =>{
    
    let mensg = args.join(" ");
    if(!mensg)
-      return message.channel.send(comousar);
+      return message.channel.send(message.author, comousar).then(msg => msg.delete(10000));
    
    const vote = new Discord.RichEmbed()
       .setTitle(":thinking: Votação")
