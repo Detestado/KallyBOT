@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args) =>{
         
     }
    if(client.channels.find("name", "changelog")){
-      let guild = client.channels.find("name", "changelog");
+      let guild = client.guild.channels.find("name", "changelog");
       const changelog = new Discord.RichEmbed()
         .setTitle("🔧 Changelog")
         .setDescription(member+ " adicionado como `" +rolename+"`!")
@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args) =>{
       guild.send(changelog) 
    }
    if(client.channels.find("name", "change-log")){
-    let guild = client.channels.find("name", "change-log");
+    let guild = client.guild.channels.find("name", "change-log");
     const changelog = new Discord.RichEmbed()
       .setTitle("🔧 Change-log")
       .setDescription(member+ " adicionado como `" +rolename+"`!")
@@ -60,7 +60,7 @@ module.exports.run = async (client, message, args) =>{
     guild.send(changelog) 
    }
    if(client.channels.find("name", "🔧change-log")){
-    let guild = client.channels.find("name", "🔧change-log");
+    let guild = client.guild.channels.find("name", "🔧change-log");
     const changelog = new Discord.RichEmbed()
       .setTitle(":wrench: Change-log")
       .setDescription(member+ " adicionado como `" +rolename+"`!")
@@ -69,7 +69,7 @@ module.exports.run = async (client, message, args) =>{
     guild.send(changelog) 
    }
    if(client.channels.find("name", "🔧changelog")){
-    let guild = client.channels.find("name", "🔧changelog");
+    let guild = client.guild.channels.find("name", "🔧changelog");
     const changelog = new Discord.RichEmbed()
       .setTitle(":wrench: Change-log")
       .setDescription(member+ " adicionado como `" +rolename+"`!")
