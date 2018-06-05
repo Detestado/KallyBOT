@@ -41,7 +41,7 @@ module.exports.run = async (client, message, args) =>{
           message.reply(`cargo `+ "`" +rolename + "`" + ` setado com sucesso em ${member}! :white_check_mark:`).then(msg => msg.delete(5000));
         
     }
-   if(client.channels.find("name", "changelog")){
+   if(client.guild.channels.find("name", "changelog")){
       let guild = client.guild.channels.find("name", "changelog");
       const changelog = new Discord.RichEmbed()
         .setTitle("🔧 Changelog")
@@ -50,7 +50,7 @@ module.exports.run = async (client, message, args) =>{
         .setFooter("© Kally Changelog")  
       guild.send(changelog) 
    }
-   if(client.channels.find("name", "change-log")){
+   if(client.guild.channels.find("name", "change-log")){
     let guild = client.guild.channels.find("name", "change-log");
     const changelog = new Discord.RichEmbed()
       .setTitle("🔧 Change-log")
@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args) =>{
       .setFooter("© Kally Change-log")  
     guild.send(changelog) 
    }
-   if(client.channels.find("name", "🔧change-log")){
+   if(client.guild.channels.find("name", "🔧change-log")){
     let guild = client.guild.channels.find("name", "🔧change-log");
     const changelog = new Discord.RichEmbed()
       .setTitle(":wrench: Change-log")
@@ -68,7 +68,7 @@ module.exports.run = async (client, message, args) =>{
       .setFooter("© Kally 🔧 Change-log")  
     guild.send(changelog) 
    }
-   if(client.channels.find("name", "🔧changelog")){
+   if(client.guild.channels.find("name", "🔧changelog")){
     let guild = client.guild.channels.find("name", "🔧changelog");
     const changelog = new Discord.RichEmbed()
       .setTitle(":wrench: Change-log")
