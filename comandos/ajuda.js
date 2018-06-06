@@ -38,6 +38,7 @@ module.exports.run = async (client, message, args) =>{
 **${prefix}serverinfo** - Ira mostrar as informações do servidor que o comando foi executado.
 **${prefix}vote** mensagem da votação - Ira abrir uma votação no canal que o comando foi executado.
 **${prefix}setcargo** @usuário nome do cargo - Ira adicionar o cargo ao usuário mencionado.
+**${prefix}removercargo** @usuário nome do cargo - Ira remover o cargo do usuário mencionado.
 **${prefix}userinfo** @usuário - Ira mostrar as informações do usuário mencionado.`)
       .setThumbnail("https://i.imgur.com/lEI7Gm6.gif")
       .setColor("#00f782")
