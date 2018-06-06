@@ -41,40 +41,41 @@ module.exports.run = async (client, message, args) =>{
           message.reply("O cargo `" +rolename+"`"+` foi removido de ${member}!`).then(msg => msg.delete(5000));
         
     }
+   let role = message.guild.roles.find("name", rolename);
    if(message.guild.channels.find("name", "changelog")){
       let guild = message.guild.channels.find("name", "changelog");
       const changelog = new Discord.RichEmbed()
-        .setTitle("🔧 Changelog")
-        .setDescription(member+ " foi removido de `" +rolename+"`!")
-        .setColor("#3f55fc")
-        .setFooter("© Kally Changelog")  
+        .setTitle("🔧 CHANGELOG")
+        .setDescription(member+ " foi removido de " +role+"!")
+        .setColor(role.color)
+        .setFooter(`Por: ${member.user.tag} - © Kally 🔧 Change-log`)
       guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "change-log")){
     let guild = message.guild.channels.find("name", "change-log");
     const changelog = new Discord.RichEmbed()
-      .setTitle("🔧 Change-log")
-      .setDescription(member+ " foi removido de `" +rolename+"`!")
-      .setColor("#3f55fc")
-      .setFooter("© Kally Change-log")  
+      .setTitle("🔧 CHANGE-LOG")
+      .setDescription(member+ " foi removido de " +role+"!")
+      .setColor(role.color)
+      .setFooter(`Por: ${member.user.tag} - © Kally 🔧 Change-log`)
     guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "🔧change-log")){
     let guild = message.guild.channels.find("name", "🔧change-log");
     const changelog = new Discord.RichEmbed()
-      .setTitle(":wrench: Change-log")
-      .setDescription(member+ " foi removido de `" +rolename+"`!")
-      .setColor("#3f55fc")
-      .setFooter("© Kally 🔧 Change-log")  
+      .setTitle(":wrench: CHANGE-LOG")
+      .setDescription(member+ " foi removido de " +role+"!")
+      .setColor(role.color)
+      .setFooter(`Por: ${member.user.tag} - © Kally 🔧 Change-log`)
     guild.send(changelog) 
    }
    if(message.guild.channels.find("name", "🔧changelog")){
     let guild = message.guild.channels.find("name", "🔧changelog");
     const changelog = new Discord.RichEmbed()
-      .setTitle(":wrench: Change-log")
-      .setDescription(member+ " foi removido de `" +rolename+"`!")
-      .setColor("#3f55fc")
-      .setFooter("© Kally 🔧 Changelog")  
+      .setTitle(":wrench: CHANGELOG")
+      .setDescription(member+ " foi removido de " +role+"!")
+      .setColor(role.color)
+      .setFooter(`Por: ${member.user.tag} - © Kally 🔧 Change-log`)   
     guild.send(changelog) 
    }
    }else {
