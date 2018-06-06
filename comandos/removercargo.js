@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) =>{
    if (message.member.hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) {
     const comousar = new Discord.RichEmbed()
        .setAuthor("Kally", client.user.avatarURL)
-       .setTitle("k!setcargo")
+       .setTitle("k!removercargo")
        .setDescription(`Ira remover o cargo do usuário mencionado.`)
        .setColor("#60d1f6")
        .setFooter("© Kally - kally.glitch.me")
