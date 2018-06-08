@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) =>{
    const s = uptime += date.getUTCSeconds() + 's';
 
    const emojijs = client.guilds.get("420316735149965322").emojis.find("name", "javascript");
-   const emojinode = client.guilds.get("420316735149965322").emojis.find("name", "nodejs");
+   const emojidiscordjs = client.guilds.get("420316735149965322").emojis.find("name", "discord.js");
    const emojipython = client.guilds.get("420316735149965322").emojis.find("name", "python");
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) =>{
       .setThumbnail(client.user.avatarURL)
 
    
-      .setDescription(`Olá, me chamo Kally, sou focado na moderação dos servidores do discord.\n\nEstou em **${client.guilds.size} servidores** do discord. \nFui feito em ${emojijs} **JavaScript** usando ${emojinode} **Node.js** e em ${emojipython} **Python** :robot: 
+      .setDescription(`Olá, me chamo Kally, sou um :mens: **menino**, sou focado na moderação dos servidores do discord.\n\nEstou em **${client.guilds.size} servidores** do discord. \nFui feito em ${emojijs} [**JavaScript**](https://www.javascript.com/) usando ${emojidiscordjs} [**Discord.js**](https://discord.js.org/) e em ${emojipython} [**Python**](https://python.org.br/).
 \nFazem **` + s + `** que eu estou acordado (ou seja, meu uptime atual) :zzz:\n \nUse **k!ajuda** para saber meus comandos!`)
    
       .addField(":question: Suporte", `https://discord.gg/fsSNJJH`)
