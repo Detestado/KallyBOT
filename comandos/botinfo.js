@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) =>{
    const s = uptime += date.getUTCSeconds() + 's';
 
    const emojijs = client.guilds.get("420316735149965322").emojis.find("name", "javascript");
-   const emojidiscordjs = client.guilds.get("420316735149965322").emojis.find("name", "discord.js");
+   const emojidiscordjs = client.guilds.get("420316735149965322").emojis.find("name", "discordjs");
    const emojipython = client.guilds.get("420316735149965322").emojis.find("name", "python");
    const info = new Discord.RichEmbed()
       .setColor("#0092ca")
