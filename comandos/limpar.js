@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) =>{
    if(args == "2") return message.reply("por favor, digite o número maior que 2 para deletar as mensagens. :x:").then(msg => msg.delete(8000));
    if(args == "1") return message.reply("por favor, digite o número maior que 2 para deletar as mensagens. :x:").then(msg => msg.delete(8000));
    if(!args[0]) return message.reply("por favor, digite o número maior que 2 para deletar as mensagens.");
-   message.channel.bulkDelete(args[0]).catch(error => message.reply("**ERRO: Provavelmente as mensagens que você quer deletar ja passaram de 14 dias, sinto muito mais não posso deletar elas.**"));
+   message.channel.bulkDelete(args[0]).catch(error => message.reply(`Algumas mensagens não puderam ser deletadas por serem enviadas a mais de 2 semanas!`));
    
    message.channel.send(`Chat limpo! Limpado **${args[0]}** mensagens por ${message.author}.`).then(msg => msg.delete(5000));
    
