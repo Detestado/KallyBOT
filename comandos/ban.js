@@ -9,8 +9,8 @@ module.exports.run = async (client, message, args) =>{
       .setTitle("k!ban")
       .setDescription(`Ira banir o usuário mencionado.`)
       .setColor("#60d1f6")
-      .setFooter("© Kally - kally.glitch.me")
-      .addField("Como usar", "`k!ban @usuário <motivo>`")
+      .setFooter("LitaricyBot")
+      .addField("Como usar", "`!ban @usuário <motivo>`")
       .addField("Permissão", "O staff que for mutar tem que esta em um cargo com a permissão `Banir membros`")
    let member = message.mentions.members.first();
    if(!member)
@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) =>{
 
    let motivo = args.slice(1).join(' ');
    if(!motivo)
-      return message.reply("por favor, indique um motivo para o banimento!").then(msg => msg.delete(6000));
+      return message.reply("Por favor, indique um motivo para o banimento!").then(msg => msg.delete(6000));
   
    await member.ban(`Por: ${message.author.tag} | Motivo: ` + motivo)
       .catch(error => message.reply(`Desculpa ${message.author} Eu não poderia banir por causa de: ${error}`));
@@ -30,10 +30,10 @@ module.exports.run = async (client, message, args) =>{
        .setAuthor('Você foi banido!', member.user.avatarURL)
        .setColor("ff0000")
 
-       .setThumbnail("https://i.imgur.com/ZmWM1UT.png")
+       .setThumbnail("https://cdn.discordapp.com/attachments/449171913076375553/468516573154508800/LITARICY.png")
 
        .setTimestamp()
-       .setFooter("© Kallyᴮᴱᵀᴬ Moderação", message.author.avatarURL)
+       .setFooter("LitaricyBot", message.author.avatarURL)
 
         .addField("Motivo:", motivo)
 
